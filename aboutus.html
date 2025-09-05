@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bangkok Genesis Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        /* Ensure header text is always black on detail pages */
+        #header a, #header button, #header div > a, #header div > button { color: black; }
+        #header #lang-menu a { color: black !important; }
+        #services-dropdown-content * { color: black !important; }
+        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
+        .btn-primary { @apply mt-8 inline-block px-10 py-3 border border-black text-black font-semibold tracking-wider uppercase text-sm hover:bg-black hover:text-white transition-colors duration-300; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
+        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+             <!-- Desktop Menu (Left) -->
+            <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+                <div class="relative group py-5 -my-5">
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[800px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-8">
+                               <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="injectables.html" class="btn">Injectables</a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="#" class="dropdown-item">Botox</a></li>
+                                    <li><a href="#" class="dropdown-item">Filler</a></li>
+                                    <li><a href="#" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="#" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="#" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="#" class="dropdown-item">Mesotherapy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Lasers and EBDs -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Laser & EBDs</a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="#" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="#" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="#" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="#" class="dropdown-item">Long pulse ND yag</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Regenerative Medicines -->
+                            <div>
+                                 <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Regenerative Medicine</a></h3>
+                                 <ul class="space-y-2 mt-4">
+                                    <li><a href="#" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="#" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="#" class="dropdown-item">MSCs and Stem Cell</a></li>
+                                    <li><a href="#" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="#" class="dropdown-item">Treatment Therapy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="aboutus.html" class="hover:opacity-70 transition-opacity font-bold">About Us</a>
+            </div>
+            
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Logo Text Section -->
+            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
+                <a href="/index.html">BANGKOK GENESIS</a>
+            </div>
+
+            <!-- Desktop Menu (Right) -->
+            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
+                <a href="#" class="hover:opacity-70 transition-opacity">Reviews</a>
+                <a href="#" class="hover:opacity-70 transition-opacity">Contact</a>
+                <!-- Language Switcher -->
+                <div class="relative" id="lang-switcher">
+                    <button onclick="toggleLang()" class="flex items-center space-x-1">
+                        <span>🇬🇧 EN</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16 md:pt-24">
+        <!-- Page Title & Motto Section -->
+        <section class="bg-white py-16 text-center">
+            <div class="container mx-auto px-6">
+                <p class="text-sm uppercase tracking-widest text-gray-500">Our Story</p>
+                <h1 class="text-5xl md:text-7xl mt-2">The Genesis of a Vision</h1>
+                <h2 class="mt-6 max-w-3xl mx-auto text-2xl md:text-3xl font-serif text-gray-800">"Where Science is Art, and You are the Masterpiece."</h2>
+            </div>
+        </section>
+
+        <!-- Our Genesis Story Section -->
+        <section class="container mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-4xl font-serif">Our Genesis</h3>
+                    <p class="mt-6 text-gray-600 font-light leading-relaxed">
+                        Bangkok Genesis Clinic was born from a shared, audacious dream between two visionary founders. They saw a landscape of aesthetic medicine that was often transactional, impersonal, and fell short of its true potential. They envisioned a sanctuary—not just a clinic—where the pinnacle of medical science would meet the delicate touch of artistry. A place where Thai people could experience a level of care, innovation, and bespoke luxury previously found only in the world's most exclusive aesthetic capitals.
+                    </p>
+                    <p class="mt-4 text-gray-600 font-light leading-relaxed">
+                        Our journey began with a relentless pursuit of excellence. We travelled the globe, curating the most advanced, proven technologies and refining techniques alongside international masters. We weren't just building a clinic; we were forging a new standard. A standard where every consultation is a deep, personal dialogue, every treatment plan a unique blueprint, and every result a testament to our unwavering commitment to revealing your most authentic, confident self. This is more than our profession; it is our passion.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="src/aboutus.png" class="w-full h-full object-cover rounded-lg shadow-xl" alt="Interior of Bangkok Genesis Clinic showing a luxurious and calm environment">
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Founders Section -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl font-serif">Meet The Visionaries</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">The heart and soul of our clinic, dedicated to a new era of aesthetic medicine.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                    <!-- Founder 1 -->
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/400x400/D6E4FF/333?text=Founder+1" class="w-48 h-48 object-cover rounded-full shadow-lg" alt="Portrait of the first founder">
+                        <h4 class="mt-6 text-2xl font-serif">Dr. Pume Vattanavanapong</h4>
+                        <p class="mt-1 text-sm uppercase tracking-widest text-gray-500">The Architect of Innovation</p>
+                        <p class="mt-4 text-sm text-gray-600 font-light">With a distinguished background in dermatological research, Dr. Anya is the scientific cornerstone of Bangkok Genesis. Her philosophy is rooted in evidence-based results, ensuring every technology and technique we offer is not only cutting-edge but also unequivocally safe and effective.</p>
+                    </div>
+                    <!-- Founder 2 -->
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/400x400/FFE4D6/333?text=Founder+2" class="w-48 h-48 object-cover rounded-full shadow-lg" alt="Portrait of the second founder">
+                        <h4 class="mt-6 text-2xl font-serif">Mr. Nutchapon Chaiwanich</h4>
+                        <p class="mt-1 text-sm uppercase tracking-widest text-gray-500">The Curator of Experience</p>
+                        <p class="mt-4 text-sm text-gray-600 font-light">An expert in luxury hospitality and patient-centric care, Kian is the visionary behind the unparalleled Genesis experience. He believes true transformation occurs when clinical excellence is enveloped in an atmosphere of trust, comfort, and profound respect for the individual's journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy Section -->
+        <section class="container mx-auto px-6 py-20">
+             <div class="text-center">
+                <h3 class="text-4xl font-serif">Our Core Philosophy</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">These principles are the pillars upon which every Genesis experience is built.</p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+                <!-- Pillar 1 -->
+                <div>
+                    <h4 class="text-xl font-serif">Bespoke Artistry</h4>
+                    <p class="mt-3 text-sm text-gray-600 font-light">We reject the 'one-size-fits-all' approach. You are unique, and your treatment plan will be a masterpiece of personalization, designed to enhance your individual beauty, not alter it.</p>
+                </div>
+                <!-- Pillar 2 -->
+                <div>
+                    <h4 class="text-xl font-serif">Scientific Excellence</h4>
+                    <p class="mt-3 text-sm text-gray-600 font-light">We are committed to a higher standard of care, utilizing only FDA-approved, globally recognized technologies and medical-grade products for results you can trust.</p>
+                </div>
+                <!-- Pillar 3 -->
+                <div>
+                    <h4 class="text-xl font-serif">Uncompromising Safety</h4>
+                    <p class="mt-3 text-sm text-gray-600 font-light">Your well-being is our absolute priority. Our clinic operates with the highest medical standards, ensuring every procedure is performed with precision, care, and utmost safety.</p>
+                </div>
+                <!-- Pillar 4 -->
+                <div>
+                    <h4 class="text-xl font-serif">A Sanctuary of Trust</h4>
+                    <p class="mt-3 text-sm text-gray-600 font-light">We have cultivated a private, luxurious environment where you can feel heard, understood, and completely at ease as you embark on your aesthetic journey with us.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-4xl font-serif">Begin Your Genesis</h3>
+                <p class="mt-4 max-w-xl mx-auto text-gray-600 font-light">
+                    Your journey to rediscovering your most radiant self begins here. We invite you to schedule a private consultation and experience the Genesis difference firsthand.
+                </p>
+                <a href="#" class="btn-primary">Book a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div>
+                     <h3 class="text-xl font-semibold tracking-widest uppercase mb-4">LOCATION</h3>
+                     <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+                <!-- Contact Info & Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">CONTACT</h3>
+                        <div class="text-sm leading-relaxed mt-4">
+                            <p>2nd Floor, The Crystal SB Ratchapruek</p>
+                            <p>Nonthaburi, Thailand</p>
+                            <p class="mt-4">Tel: 092-369-0456</p>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
+                        <div class="text-sm uppercase tracking-wider leading-loose mt-4">
+                            <a href="#" class="block hover:opacity-70">Services</a>
+                            <a href="aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="#" class="block mt-2 hover:opacity-70">Reviews</a>
+                        </div>
+                    </div>
+                     <div class="sm:col-span-2">
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
+                         <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
+                            <a href="#" class="hover:opacity-100">FACEBOOK</a>
+                            <a href="#" class="hover:opacity-100">INSTAGRAM</a>
+                            <a href="#" class="hover:opacity-100">LINE</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2025 BANGKOK GENESIS CLINIC. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Language switcher
+            window.toggleLang = function() {
+                document.getElementById('lang-menu').classList.toggle('hidden');
+            }
+            
+            // Close language switcher if clicked outside
+            window.addEventListener('click', function(e) {
+                const langSwitcher = document.getElementById('lang-switcher');
+                if (langSwitcher && !langSwitcher.contains(e.target)) {
+                    document.getElementById('lang-menu').classList.add('hidden');
+                }
+            });
+
+            // Mobile Menu Logic (placeholder for potential mobile menu)
+            // const mobileMenuButton = document.getElementById('mobile-menu-button');
+            // if (mobileMenuButton) {
+            //     // Add mobile menu logic here if needed
+            // }
+        });
+    </script>
+</body>
+</html>
