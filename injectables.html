@@ -1,12 +1,12 @@
 <!-- ======================================================================= -->
-<!-- FILE: index.html (หน้าแรก)                                            -->
+<!-- ✨ ไฟล์ใหม่: injectables.html                                          -->
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bangkok Genesis Clinic - Premium Aesthetic Clinic</title>
+    <title>Injectable Services - Bangkok Genesis Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,49 +14,33 @@
     <style>
         body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
         h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
-        .hero-background { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1; filter: brightness(0.5); }
-        #header.scrolled-header a, #header.scrolled-header button, #header.scrolled-header div > a, #header.scrolled-header div > button { color: black; }
-        #header.top-header a, #header.top-header button, #header.top-header div > a, #header.top-header div > button { color: white; }
-        .btn-solid { @apply px-8 py-3 bg-black text-white font-semibold tracking-wider uppercase transition-opacity duration-300 text-sm; }
-        .btn-solid:hover { @apply opacity-80; }
-        .btn-outline { @apply px-8 py-3 border font-semibold tracking-wider uppercase transition-colors duration-300 text-sm; }
-        
-        #header #lang-menu a {
-            color: black !important;
-        }
-
-        /* === โค้ด CSS ที่แก้ไขให้ถูกต้อง (รอบสุดท้าย) === */
-        /* บังคับให้ข้อความทั้งหมดใน Services dropdown เป็นสีดำเสมอ */
-        #services-dropdown-content * {
-             color: black !important;
-        }
-        .dropdown-item {
-            @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200;
-        }
-
+        /* ทำให้ Header เป็นสีดำเสมอในหน้ารายละเอียด */
+        #header a, #header button, #header div > a, #header div > button { color: black; }
+        #header #lang-menu a { color: black !important; }
+        #services-dropdown-content * { color: black !important; }
+        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
+        .service-card-title { @apply absolute bottom-0 left-0 w-full p-6 text-white text-2xl font-serif bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:opacity-0; }
+        .service-card-overlay { @apply absolute inset-0 bg-white bg-opacity-95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300; }
+        .btn-card { @apply mt-4 inline-block px-6 py-2 border border-black text-black font-semibold tracking-wider uppercase text-xs hover:bg-black hover:text-white transition-colors; }
     </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
-    <!-- ===== HEAD MENU START ===== -->
     <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 top-header" id="header">
+    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
         <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
-            <!-- Desktop Menu (Left) -->
+             <!-- Desktop Menu (Left) -->
             <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
-                <!-- === Services Dropdown Menu (แก้ไขแล้ว) === -->
-                <!-- เพิ่ม py-5 -my-5 เพื่อขยายพื้นที่ hover ป้องกันเมนูหาย -->
                 <div class="relative group py-5 -my-5">
-                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
-                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
-                        <div class="grid grid-cols-3 gap-x-12">
-                            <!-- Column 1: Injectables -->
-                            <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="Injectables.html" class="btn">Injectables</a></h3>
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity font-bold">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[800px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-8">
+                               <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Injectables</a></h3>
                                 <ul class="space-y-2 mt-4">
-                                    <li><a href="Injectables/Botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="#" class="dropdown-item">Botox</a></li>
                                     <li><a href="#" class="dropdown-item">Filler</a></li>
-                                    <li><a href="Injectables/Sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="#" class="dropdown-item">Sculptra</a></li>
                                     <li><a href="#" class="dropdown-item">Radiesse</a></li>
                                     <li><a href="#" class="dropdown-item">Juvelook</a></li>
                                     <li><a href="#" class="dropdown-item">Mesotherapy</a></li>
@@ -72,20 +56,21 @@
                                     <li><a href="#" class="dropdown-item">Long pulse ND yag</a></li>
                                 </ul>
                             </div>
-                            <!-- Column 3: Regenerative Medicine -->
+                            <!-- Column 3: Regenerative Medicines -->
                             <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Regenerative Medicine</a></h3>
-                                <ul class="space-y-2 mt-4">
-                                    <li><a href="#" class="dropdown-item">PRP (Platelet Rich Plasma)</a></li>
-                                    <li><a href="#" class="dropdown-item">Exosome Therapy</a></li>
-                                    <li><a href="#" class="dropdown-item">Stem Cell Therapy</a></li>
-                                    <li><a href="#" class="dropdown-item">Skin Booster</a></li>
+                                 <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Regenerative Medicine</a></h3>
+                                 <ul class="space-y-2 mt-4">
+                                    <li><a href="#" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="#" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="#" class="dropdown-item">MSCs and Stem Cell</a></li>
+                                    <li><a href="#" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="#" class="dropdown-item">Treatment Therapy</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
+                <a href="#" class="hover:opacity-70 transition-opacity">About Us</a>
             </div>
             
             <!-- Mobile Hamburger Button -->
@@ -97,7 +82,7 @@
 
             <!-- Logo Text Section -->
             <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
-                <a href="index.html">BANGKOK GENESIS</a>
+                <a href="/index.html">BANGKOK GENESIS</a>
             </div>
 
             <!-- Desktop Menu (Right) -->
@@ -112,75 +97,98 @@
                     </button>
                     <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
                         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇬🇧 English</a>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇨🇳 中文</a>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇰🇷 한국어</a>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇯🇵 日本語</a>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇲🇾 Bahasa Melayu</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- ===== HEAD MENU END ===== -->
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-white text-xl uppercase tracking-widest hidden">
-        <button id="close-mobile-menu" class="absolute top-6 right-6 text-4xl">&times;</button>
-        <a href="#" class="mobile-link">Injectables</a>
-        <a href="#" class="mobile-link">Laser</a>
-        <a href="#" class="mobile-link">Regenerative Medicine</a>
-        <a href="aboutus.html" class="mobile-link">About Us</a>
-        <a href="#" class="mobile-link">Reviews</a>
-        <a href="#" class="mobile-link">Contact</a>
-    </div>
-
 
     <!-- Main Content -->
-    <main>
-        <section class="relative h-screen flex items-center justify-center text-center text-white">
-            <img src="src/banner.png" 
-                 alt="Client relaxing in the modern and elegant interior of Bangkok Genesis Clinic" 
-                 class="hero-background">
-            
-            <div class="z-10 px-4">
-                <h1 class="text-5xl md:text-7xl">The Art of Timeless Beauty</h1>
-                <p class="mt-4 text-lg md:text-xl font-light max-w-2xl mx-auto tracking-wide">Crafting unique, natural-looking results with science and artistry.</p>
-                <div class="mt-10"><a href="#" class="btn-outline border-white text-white hover:bg-white hover:text-black">Book a Consultation</a></div>
+    <main class="pt-16 md:pt-24">
+        <!-- Page Title Section -->
+        <section class="bg-white py-16 text-center">
+            <div class="container mx-auto px-6">
+                <p class="text-sm uppercase tracking-widest text-gray-500">Our Services</p>
+                <h1 class="text-5xl md:text-7xl mt-2">Injectables</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">Enhance your natural beauty and restore youthful volume with our range of premium injectable treatments, administered by expert medical professionals.</p>
             </div>
         </section>
-        <section class="py-20 md:py-32">
-             <div class="container mx-auto px-6 md:px-10 text-center">
-                <h2 class="text-4xl md:text-5xl">Our Core Services</h2>
-                <p class="mt-6 text-lg max-w-3xl mx-auto leading-relaxed text-gray-600 font-light">
-                    Your journey to confidence begins here. We combine cutting-edge technology with aesthetic mastery to deliver personalized treatments that enhance your natural beauty.
-                </p>
-                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 lg:gap-20 justify-center">
-                    <div class="group relative">
-                        <img src="src/injectable.png" alt="Injectable treatments" class="w-full h-full object-cover rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 class="text-white text-2xl font-serif">Injectables</h3>
-                        </div>
-                     </div>
-                     <div class="group relative">
-                        <img src="src/laser.png" alt="Laser and Energy-Based Devices" class="w-full h-full object-cover rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 class="text-white text-2xl font-serif">Lasers & EBDs</h3>
-                        </div>
-                     </div>
-                     <div class="group relative">
-                        <img src="src/regenerative.png" alt="Regenerative Medicine treatments" class="w-full h-full object-cover rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 class="text-white text-2xl font-serif">Regenerative Medicine</h3>
-                        </div>
-                     </div>
-                </div>
+
+        <!-- Services Grid Section -->
+        <section class="container mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Botox Card -->
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/D6E4FF/333?text=Botox" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Botox Treatment">
+                    <div class="service-card-title">Botox</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Botox</h4>
+                        <p class="mt-2 text-sm text-gray-600">Relax facial muscles to reduce wrinkles and fine lines for a smoother, youthful appearance.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- Filler Card -->
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/FFE4D6/333?text=Filler" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Filler Treatment">
+                    <div class="service-card-title">Filler</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Filler</h4>
+                        <p class="mt-2 text-sm text-gray-600">Restore volume and contours, enhancing features and diminishing deep facial lines.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- Sculptra Card -->
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/D6FFD6/333?text=Sculptra" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Sculptra Treatment">
+                    <div class="service-card-title">Sculptra</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Sculptra</h4>
+                        <p class="mt-2 text-sm text-gray-600">Stimulate your skin's natural collagen production for gradual, long-lasting facial rejuvenation.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                 <!-- Radiesse Card -->
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/FFF5D6/333?text=Radiesse" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Radiesse Treatment">
+                    <div class="service-card-title">Radiesse</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Radiesse</h4>
+                        <p class="mt-2 text-sm text-gray-600">Provide an immediate lift and stimulate collagen for improved skin structure and elasticity.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- Juvelook Card -->
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/FFD6F5/333?text=Juvelook" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Juvelook Treatment">
+                    <div class="service-card-title">Juvelook</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Juvelook</h4>
+                        <p class="mt-2 text-sm text-gray-600">A hybrid filler that combines instant, natural volume with long-term collagen stimulation.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                <!-- Mesotherapy Card -->
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/D6FDFF/333?text=Mesotherapy" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Mesotherapy Treatment">
+                    <div class="service-card-title">Mesotherapy</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Mesotherapy</h4>
+                        <p class="mt-2 text-sm text-gray-600">Deliver a custom cocktail of vitamins and nutrients directly into the skin for targeted revitalization.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
             </div>
         </section>
     </main>
 
-    <!-- ===== FOOT MENU START ===== -->
-    <!-- Footer -->
+    <  <!-- Footer -->
     <footer class="bg-black text-white py-16">
         <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
             <div class="grid md:grid-cols-2 gap-12">
@@ -205,7 +213,7 @@
                         <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
                         <div class="text-sm uppercase tracking-wider leading-loose mt-4">
                             <a href="#" class="block hover:opacity-70">Services</a>
-                            <a href="aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="#" class="block mt-2 hover:opacity-70">About Us</a>
                             <a href="#" class="block mt-2 hover:opacity-70">Reviews</a>
                         </div>
                     </div>
@@ -224,7 +232,6 @@
             </div>
         </div>
     </footer>
-    <!-- ===== FOOT MENU END ===== -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -275,7 +282,5 @@
             });
         });
     </script>
-</body>
-</html>
 </body>
 </html>
