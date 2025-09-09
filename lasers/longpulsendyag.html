@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Long Pulse Nd:Yag Laser - Advanced Skin & Hair Solutions - Bangkok Genesis
+      Clinic
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+
+      #header a,
+      #header button,
+      #header div > a,
+      #header div > button {
+        color: black;
+      }
+
+      #header #lang-menu a {
+        color: black !important;
+      }
+
+      #services-dropdown-content * {
+        color: black !important;
+      }
+
+      .dropdown-item {
+        @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200;
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .faq-question {
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <header
+      class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md"
+      id="header"
+    >
+      <nav
+        class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center"
+      >
+        <div
+          class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest"
+        >
+                <div class="relative group py-5 -my-5">
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Lasers and EBDs -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Regenerative Medicine -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          <a href="/aboutus.html" class="hover:opacity-70 transition-opacity"
+            >About Us</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2"
+        >
+          <a href="/index.html">BANGKOK GENESIS</a>
+        </div>
+
+        <div
+          class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest"
+        >
+          <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity"
+            >Our Doctors</a
+          >
+          <a href="/contactus.html" class="hover:opacity-70 transition-opacity"
+            >Contact</a
+          >
+          <div class="relative" id="lang-switcher">
+            <button onclick="toggleLang()" class="flex items-center space-x-1">
+              <span>🇬🇧 EN</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <div
+              id="lang-menu"
+              class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden"
+            >
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100"
+                >🇹🇭 ไทย</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-black bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-white text-xl uppercase tracking-widest hidden"
+    >
+      <button id="close-mobile-menu" class="absolute top-6 right-6 text-4xl">
+        ×
+      </button>
+      <a href="#" class="mobile-link">Services</a>
+      <a href="#" class="mobile-link">About Us</a>
+      <a href="#" class="mobile-link">Reviews</a>
+      <a href="#" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+      <section class="relative bg-gray-100">
+        <div
+          class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center"
+        >
+          <div class="py-16 md:py-32">
+            <p class="text-sm uppercase tracking-widest text-gray-500">
+              Lasers & EBDs
+            </p>
+            <h1 class="text-5xl md:text-7xl mt-2">Long Pulse Nd:Yag Laser</h1>
+            <p class="mt-4 max-w-lg text-gray-600 font-light text-lg">
+              The gold standard for effective hair removal and skin
+              rejuvenation, safe for all skin tones. Unveil smoother, clearer
+              skin with unparalleled precision and comfort.
+            </p>
+          </div>
+          <div class="hidden md:block h-full">
+            <img
+              src="https://placehold.co/800x1000/E9D8D5/333?text=Silky+Smooth+Skin"
+              class="w-full h-full object-cover"
+              alt="Long Pulse Nd:Yag Laser treatment for smooth skin"
+            />
+          </div>
+        </div>
+      </section>
+      <div class="container mx-auto px-6 py-16 md:py-24 max-w-4xl">
+        <section
+          class="fade-in-section grid md:grid-cols-2 gap-12 items-center mb-24"
+        >
+          <div class="order-2 md:order-1">
+            <h2 class="text-3xl md:text-4xl font-serif">
+              The Gold Standard for All Skin Tones
+            </h2>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+              The Long Pulse Nd:Yag is a highly versatile laser that operates at
+              a 1064nm wavelength, allowing it to penetrate deeper into the skin
+              than many other lasers. This unique characteristic makes it
+              exceptionally safe and effective for all skin types, including
+              darker and tanned skin. Its energy selectively targets melanin in
+              hair follicles for removal, hemoglobin in blood vessels to treat
+              vascular lesions, and water in the dermis to stimulate collagen,
+              all while protecting the surrounding tissue. Combined with an
+              advanced cooling system, it offers a comfortable and efficient
+              treatment experience.
+            </p>
+          </div>
+          <div class="order-1 md:order-2">
+            <img
+              src="https://placehold.co/600x600/F5F1EF/333?text=Advanced+Laser+Technology"
+              class="rounded-lg shadow-xl"
+              alt="Conceptual image of advanced laser technology"
+            />
+          </div>
+        </section>
+        <section class="fade-in-section text-center mb-24">
+          <h2 class="text-3xl md:text-4xl font-serif">
+            A Spectrum of Solutions for Skin & Body
+          </h2>
+          <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+            From unwanted hair to vascular concerns, the Long Pulse Nd:Yag laser
+            offers a comprehensive range of treatments.
+          </p>
+          <div
+            class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8"
+          >
+            <div class="bg-gray-50 p-6 rounded-lg text-left">
+              <h3 class="font-bold text-lg">Hair Removal & Skin Texture</h3>
+              <ul class="mt-3 space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Superior
+                  permanent hair reduction for face & body.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Minimizes
+                  enlarged pores for a smoother complexion.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Stimulates
+                  collagen to reduce fine lines & wrinkles.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Improves
+                  overall skin tone and radiance.
+                </li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg text-left">
+              <h3 class="font-bold text-lg">Pigment & Vascular Concerns</h3>
+              <ul class="mt-3 space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Effectively
+                  treats spider veins and broken capillaries.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Reduces facial
+                  redness and rosacea symptoms.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Fades certain
+                  types of pigmented lesions.
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-3 mt-1">✓</span> Brightens and
+                  clarifies dull, uneven skin.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="fade-in-section text-center mb-24">
+          <h2 class="text-3xl md:text-4xl font-serif">
+            How It Works: The Power of 1064nm
+          </h2>
+          <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+            Our advanced laser technology uses a specific wavelength and pulse
+            duration to selectively target and treat skin concerns without
+            harming surrounding tissue.
+          </p>
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="font-bold text-lg text-rose-800">For Hair Removal</h3>
+              <p class="text-sm text-gray-600 mt-2">
+                The 1064nm laser energy is absorbed by the melanin in the hair
+                shaft, generating heat that destroys the follicle and prevents
+                future growth.
+              </p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="font-bold text-lg text-rose-600">
+                For Vascular Lesions
+              </h3>
+              <p class="text-sm text-gray-600 mt-2">
+                The energy is absorbed by hemoglobin in blood, causing unwanted
+                vessel walls to collapse and fade from view. Ideal for spider
+                veins and redness.
+              </p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="font-bold text-lg text-rose-400">
+                For Skin Rejuvenation
+              </h3>
+              <p class="text-sm text-gray-600 mt-2">
+                The laser's heat gently penetrates the dermis, stimulating a
+                natural healing response and promoting the production of new
+                collagen for firmer, brighter skin.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="fade-in-section text-center mb-24">
+          <h2 class="text-3xl md:text-4xl font-serif">
+            Your Long Pulse Nd:Yag Journey
+          </h2>
+          <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+            We ensure a comfortable, safe, and effective treatment from
+            consultation to completion.
+          </p>
+          <div
+            class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            <div class="text-center p-4">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold">1. Consultation</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Our expert assesses your skin, discusses your goals, and creates
+                a personalized treatment plan.
+              </p>
+            </div>
+            <div class="text-center p-4">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold">2. Preparation</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                The area is cleansed and protective eyewear is provided. A
+                cooling gel may be applied for enhanced comfort.
+              </p>
+            </div>
+            <div class="text-center p-4">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold">3. Laser Application</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                The practitioner glides the handpiece over the skin, delivering
+                precise laser pulses with integrated cooling.
+              </p>
+            </div>
+            <div class="text-center p-4">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-2.714 4.869a2 2 0 00.23 2.164L7 10m7 0h-4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold">4. Post-Treatment</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                A soothing cream is applied. You can return to your day with
+                simple aftercare instructions.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="fade-in-section grid md:grid-cols-2 gap-8 md:gap-12 mb-24"
+        >
+          <div class="bg-gray-50 p-8 rounded-lg">
+            <h2 class="text-2xl md:text-3xl font-serif">Preparation</h2>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3 mt-1">✓</span> Avoid sun
+                exposure and tanning for 2-4 weeks prior to treatment.
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3 mt-1">✓</span> Do not wax,
+                pluck, or tweeze the area for 4 weeks; shaving is permitted.
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3 mt-1">✓</span> Arrive with
+                clean skin, free of any makeup, lotions, or deodorants.
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3 mt-1">✓</span> Inform your
+                practitioner of any medications you are currently taking.
+              </li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg">
+            <h2 class="text-2xl md:text-3xl font-serif">Aftercare</h2>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3 mt-1">✓</span> Mild redness is
+                normal and typically subsides within a few hours.
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3 mt-1">✓</span> Apply
+                broad-spectrum SPF 30+ daily and avoid direct sun exposure.
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3 mt-1">✓</span> Avoid hot baths,
+                saunas, and intense exercise for 24-48 hours.
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3 mt-1">✓</span> Keep skin
+                hydrated with a gentle moisturizer; do not scrub or exfoliate.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="fade-in-section max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-serif text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div class="space-y-4" id="faq-container">
+            <div class="border rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50"
+              >
+                <span class="font-semibold text-lg"
+                  >Is the Long Pulse Nd:Yag treatment painful?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-5 pb-5 text-gray-600">
+                <p class="pt-2 border-t">
+                  Most patients describe the sensation as a quick, warm snap.
+                  Our laser is equipped with a Dynamic Cooling Device (DCD) that
+                  sprays a cooling mist onto the skin just before each laser
+                  pulse, significantly improving comfort and making the
+                  treatment very tolerable.
+                </p>
+              </div>
+            </div>
+            <div class="border rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50"
+              >
+                <span class="font-semibold text-lg"
+                  >How many sessions will I need?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-5 pb-5 text-gray-600">
+                <p class="pt-2 border-t">
+                  For hair removal, typically 5-8 sessions spaced 4-8 weeks
+                  apart are needed for optimal results, as hair grows in
+                  different cycles. For skin rejuvenation or vascular
+                  treatments, 3-5 sessions may be recommended. Your practitioner
+                  will create a custom plan during your consultation.
+                </p>
+              </div>
+            </div>
+            <div class="border rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50"
+              >
+                <span class="font-semibold text-lg"
+                  >Is there any downtime?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-5 pb-5 text-gray-600">
+                <p class="pt-2 border-t">
+                  There is virtually no downtime. You may experience some mild
+                  redness or slight swelling in the treated area, which usually
+                  resolves within a few hours to a day. You can return to your
+                  normal daily activities immediately following your session.
+                </p>
+              </div>
+            </div>
+            <div class="border rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50"
+              >
+                <span class="font-semibold text-lg"
+                  >Why is this laser safe for darker skin tones?</span
+                >
+                <svg
+                  class="w-5 h-5 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-5 pb-5 text-gray-600">
+                <p class="pt-2 border-t">
+                  The 1064nm wavelength penetrates deeper into the skin and is
+                  less absorbed by melanin at the skin's surface (epidermis).
+                  This unique property allows the laser to bypass the
+                  superficial pigment and target the hair follicle or blood
+                  vessel deep below. This makes it the safest and most effective
+                  option for individuals with tan or darker skin tones,
+                  minimizing the risk of burns or pigmentation changes that can
+                  occur with other types of lasers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ===== FOOT MENU START ===== -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div>
+                     <h3 class="text-xl font-semibold tracking-widest uppercase mb-4">LOCATION</h3>
+                     <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+                <!-- Contact Info & Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">CONTACT</h3>
+                        <div class="text-sm leading-relaxed mt-4">
+                            <p>2nd Floor, The Crystal SB Ratchapruek</p>
+                            <p>Nonthaburi, Thailand</p>
+                            <p class="mt-4">Tel: 092-369-0456</p>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
+                        <div class="text-sm uppercase tracking-wider leading-loose mt-4">
+                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
+                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
+                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
+                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
+                        </div>
+                    </div>
+                     <div class="sm:col-span-2">
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
+                         <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
+                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2025 BANGKOK GENESIS CLINIC. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== FOOT MENU END ===== -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Language switcher
+        window.toggleLang = function () {
+          document.getElementById("lang-menu").classList.toggle("hidden");
+        };
+        document.addEventListener("click", function (e) {
+          const langSwitcher = document.getElementById("lang-switcher");
+          if (langSwitcher && !langSwitcher.contains(e.target)) {
+            document.getElementById("lang-menu").classList.add("hidden");
+          }
+        });
+
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMobileMenu = document.getElementById("close-mobile-menu");
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.remove("hidden");
+            mobileMenu.classList.add("flex");
+          });
+        }
+        if (closeMobileMenu) {
+          closeMobileMenu.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+          });
+        }
+
+        // FAQ Accordion Logic
+        const faqContainer = document.getElementById("faq-container");
+        if (faqContainer) {
+          const questions = faqContainer.querySelectorAll(".faq-question");
+          questions.forEach((question) => {
+            question.addEventListener("click", () => {
+              const answer = question.nextElementSibling;
+              const icon = question.querySelector("svg");
+              const isExpanded = answer.style.maxHeight;
+
+              // Close all other answers
+              questions.forEach((q) => {
+                if (q !== question) {
+                  q.nextElementSibling.style.maxHeight = null;
+                  q.nextElementSibling.style.paddingBottom = "0px";
+                  q.querySelector("svg").style.transform = "rotate(0deg)";
+                }
+              });
+
+              // Open or close the clicked one
+              if (isExpanded) {
+                answer.style.maxHeight = null;
+                answer.style.paddingBottom = "0px";
+                icon.style.transform = "rotate(0deg)";
+              } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.paddingBottom = "1.25rem";
+                icon.style.transform = "rotate(180deg)";
+              }
+            });
+          });
+        }
+
+        // Fade-in on scroll Logic
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        const sectionsToFade = document.querySelectorAll(".fade-in-section");
+        sectionsToFade.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>

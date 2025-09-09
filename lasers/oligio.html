@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oligio - RF Skin Tightening & Lifting - Bangkok Genesis Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        #header a, #header button, #header div > a, #header div > button { color: black; }
+        #header #lang-menu a { color: black !important; }
+        #services-dropdown-content * { color: black !important; }
+        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
+        
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .faq-question {
+            transition: background-color 0.2s ease-in-out;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
+        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+             <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+                <div class="relative group py-5 -my-5">
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Lasers and EBDs -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Regenerative Medicine -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
+                <a href="/index.html">BANGKOK GENESIS</a>
+            </div>
+
+            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
+                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
+                <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
+                <div class="relative" id="lang-switcher">
+                    <button onclick="toggleLang()" class="flex items-center space-x-1">
+                        <span>🇬🇧 EN</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-white text-xl uppercase tracking-widest hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-4xl">×</button>
+        <a href="#" class="mobile-link">Services</a>
+        <a href="#" class="mobile-link">About Us</a>
+        <a href="#" class="mobile-link">Reviews</a>
+        <a href="#" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+        <section class="relative bg-gray-100">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+                <div class="py-16 md:py-32">
+                    <p class="text-sm uppercase tracking-widest text-gray-500">Lasers & EBDs Program</p>
+                    <h1 class="text-5xl md:text-7xl mt-2 font-serif">Oligio Lifting</h1>
+                    <p class="mt-4 max-w-lg text-gray-600 font-light text-lg">Experience the next generation of RF skin tightening. Oligio offers a comfortable, non-invasive solution to redefine your contours, smooth wrinkles, and restore youthful vitality with advanced monopolar radiofrequency technology.</p>
+                </div>
+                <div class="hidden md:block h-full">
+                    <img src="https://placehold.co/800x1000/F0E6D8/5A5A5A?text=Oligio+RF+Treatment" class="w-full h-full object-cover" alt="Oligio RF skin tightening treatment aesthetic">
+                </div>
+            </div>
+        </section>
+        
+        <div class="container mx-auto px-6 py-16 md:py-24 max-w-4xl">
+
+            <section class="fade-in-section grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-serif">What is Oligio? The Power of Monopolar RF</h2>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Oligio is an innovative, non-invasive skin tightening and lifting device utilizing **Monopolar Radiofrequency (RF)** technology. Unlike conventional RF, Oligio delivers a uniform, controlled heat deep into the dermal layers and subcutaneous fat. This thermal energy targets collagen fibers, causing them to contract for an immediate tightening effect, while simultaneously stimulating fibroblasts to produce new, healthy collagen and elastin over time. This dual action leads to a natural, long-lasting rejuvenation, improving skin elasticity, firmness, and overall texture.
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Equipped with intelligent sensors and a built-in cooling system (cooling shot and vibration), Oligio ensures a precise and comfortable treatment experience. It effectively addresses concerns like sagging skin, fine lines, wrinkles, and lack of facial definition on the face, neck, and even around the eyes.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/600x600/D5E8F0/3A3A3A?text=Oligio+Technology" class="rounded-lg shadow-xl" alt="Conceptual image of Oligio RF technology working on skin">
+                </div>
+            </section>
+
+            <section class="fade-in-section text-center mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif">Key Benefits of Oligio Lifting</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">Discover the transformative advantages of Oligio for a more youthful you.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-left p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Lifts & Tightens</h3>
+                        <p class="text-sm text-gray-600">Effectively lifts sagging skin on the face, jawline, and neck, reducing jowls and promoting a more defined contour.</p>
+                    </div>
+                    <div class="text-left p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Reduces Wrinkles</h3>
+                        <p class="text-sm text-gray-600">Smoothes out fine lines and wrinkles, including around the eyes, forehead, and mouth, for a softer appearance.</p>
+                    </div>
+                    <div class="text-left p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Improves Skin Quality</h3>
+                        <p class="text-sm text-gray-600">Enhances skin elasticity, firmness, and overall texture, leading to a radiant and healthier-looking complexion.</p>
+                    </div>
+                     <div class="text-left p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Quick & Comfortable</h3>
+                        <p class="text-sm text-gray-600">A relatively fast procedure with minimal discomfort, thanks to its advanced cooling and vibration features.</p>
+                    </div>
+                     <div class="text-left p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-100 text-yellow-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806L12 2.928l2.219.963a3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946l.963 2.219a3.42 3.42 0 010 3.138l-.963 2.219a3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806L12 21.072l-2.219-.963a3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946l-.963-2.219a3.42 3.42 0 010-3.138l.963-2.219a3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Suitable for All Skin Types</h3>
+                        <p class="text-sm text-gray-600">A safe and effective treatment option for various skin types and tones, with minimal risk of side effects.</p>
+                    </div>
+                     <div class="text-left p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l-.04.027A1 1 0 016 20h.01l-.01-.01z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">No Downtime</h3>
+                        <p class="text-sm text-gray-600">Walk out of the clinic and immediately resume your daily routine with no recovery period.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fade-in-section mb-24 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif mb-8">Targeted Treatment Areas</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <img src="https://placehold.co/400x300/F0E6D8/5A5A5A?text=Full+Face" alt="Full face treatment area" class="rounded-lg mb-4">
+                        <h3 class="font-bold text-xl">Full Face</h3>
+                        <p class="text-sm text-gray-600 mt-2">Overall skin tightening, wrinkle reduction, and improved facial contours.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <img src="https://placehold.co/400x300/D5E8F0/3A3A3A?text=Eye+Area" alt="Eye area treatment" class="rounded-lg mb-4">
+                        <h3 class="font-bold text-xl">Eye Area</h3>
+                        <p class="text-sm text-gray-600 mt-2">Reduces fine lines, crow's feet, and lifts sagging eyelids for a brighter look.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg">
+                        <img src="https://placehold.co/400x300/F0D5E8/3A3A3A?text=Neck+and+Chin" alt="Neck and chin treatment" class="rounded-lg mb-4">
+                        <h3 class="font-bold text-xl">Neck & Chin</h3>
+                        <p class="text-sm text-gray-600 mt-2">Tightens loose skin, diminishes a double chin, and defines the jawline.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="fade-in-section grid md:grid-cols-2 gap-8 md:gap-12 mb-24">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h2 class="text-2xl md:text-3xl font-serif">Preparation</h2>
+                    <ul class="mt-4 space-y-3">
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> No specific preparation is needed before your appointment.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> It's best to avoid heavy sun exposure before treatment.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Please arrive with a clean face, free of makeup or lotions.</li>
+                         <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Inform your doctor about any medical conditions or medications.</li>
+                    </ul>
+                </div>
+                 <div class="bg-gray-50 p-8 rounded-lg">
+                    <h2 class="text-2xl md:text-3xl font-serif">Aftercare</h2>
+                     <ul class="mt-4 space-y-3">
+                        <li class="flex items-start"><span class="text-blue-500 mr-3 mt-1">✓</span> You can resume all normal activities immediately. Zero downtime.</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-3 mt-1">✓</span> Minor redness or swelling is possible but typically subsides within an hour or two.</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-3 mt-1">✓</span> Keep skin hydrated and apply broad-spectrum sunscreen daily.</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-3 mt-1">✓</span> Avoid extreme heat (saunas, hot baths) for 24-48 hours.</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <section class="fade-in-section max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif text-center mb-8">Frequently Asked Questions</h2>
+                <div class="space-y-4" id="faq-container">
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">Is Oligio painful?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">Oligio is designed for comfort. Most patients report a warm, tolerable sensation. The device's integrated cooling and vibration system minimizes discomfort throughout the procedure, making it a very manageable experience. Some areas might feel warmer than others, but it should not be painful.</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">How is Oligio different from Ulthera or Thermage?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t"><b>Oligio vs. Ulthera:</b> Oligio uses Monopolar RF to heat the dermis for overall skin tightening and texture improvement, focusing on collagen stimulation. Ulthera uses Microfocused Ultrasound (MFU-V) to target the deeper SMAS layer for a more pronounced lift, specifically addressing structural laxity.<br><br><b>Oligio vs. Thermage:</b> Both use Monopolar RF technology. Oligio is a newer generation device, offering enhanced patient comfort due to its advanced cooling and vibration features, and often allows for faster treatment times with effective results.</p>
+                        </div>
+                    </div>
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">When will I see results and how long do they last?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                           <p class="pt-2 border-t">You may notice an immediate subtle tightening due to collagen contraction. However, the true results develop gradually over 2-3 months as your body naturally produces new collagen. Results typically last for 6-12 months, and some patients find annual maintenance treatments beneficial to prolong the effects.</p>
+                        </div>
+                    </div>
+                     <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">Who is a suitable candidate for Oligio?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">Oligio is ideal for individuals experiencing mild to moderate skin laxity, fine lines, and wrinkles. It is suitable for those looking for a non-surgical solution to improve skin firmness and overall texture on the face, neck, and around the eyes. A consultation with our doctor will determine if Oligio is the right treatment for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== FOOT MENU START ===== -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div>
+                     <h3 class="text-xl font-semibold tracking-widest uppercase mb-4">LOCATION</h3>
+                     <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+                <!-- Contact Info & Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">CONTACT</h3>
+                        <div class="text-sm leading-relaxed mt-4">
+                            <p>2nd Floor, The Crystal SB Ratchapruek</p>
+                            <p>Nonthaburi, Thailand</p>
+                            <p class="mt-4">Tel: 092-369-0456</p>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
+                        <div class="text-sm uppercase tracking-wider leading-loose mt-4">
+                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
+                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
+                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
+                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
+                        </div>
+                    </div>
+                     <div class="sm:col-span-2">
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
+                         <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
+                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2025 BANGKOK GENESIS CLINIC. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== FOOT MENU END ===== -->
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Language switcher
+            window.toggleLang = function() {
+                document.getElementById('lang-menu').classList.toggle('hidden');
+            }
+            document.addEventListener('click', function(e) {
+                const langSwitcher = document.getElementById('lang-switcher');
+                if (langSwitcher && !langSwitcher.contains(e.target)) {
+                    document.getElementById('lang-menu').classList.add('hidden');
+                }
+            });
+
+            // Mobile Menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+            
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                });
+            }
+            if(closeMobileMenu) {
+                closeMobileMenu.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            }
+
+
+            // FAQ Accordion Logic
+            const faqContainer = document.getElementById('faq-container');
+            if(faqContainer) {
+                const questions = faqContainer.querySelectorAll('.faq-question');
+                questions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        const icon = question.querySelector('svg');
+                        const isExpanded = answer.style.maxHeight;
+
+                        // Close all other answers
+                        questions.forEach(q => {
+                            if (q !== question) {
+                                q.nextElementSibling.style.maxHeight = null;
+                                q.nextElementSibling.style.paddingBottom = '0px';
+                                q.querySelector('svg').style.transform = 'rotate(0deg)';
+                            }
+                        });
+
+                        // Open or close the clicked one
+                        if (isExpanded) {
+                            answer.style.maxHeight = null;
+                            answer.style.paddingBottom = '0px';
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                            answer.style.paddingBottom = '1.25rem';
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                });
+            }
+
+            // Fade-in on scroll Logic
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            const sectionsToFade = document.querySelectorAll('.fade-in-section');
+            sectionsToFade.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>

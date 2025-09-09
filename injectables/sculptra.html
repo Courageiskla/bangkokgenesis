@@ -1,0 +1,361 @@
+<!-- ======================================================================= -->
+<!-- ✨ ไฟล์ใหม่: sculptra.html (หน้ารายละเอียดสคัลป์ตรา)                     -->
+<!-- ======================================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sculptra Treatment Details - Bangkok Genesis Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        /* ทำให้ Header เป็นสีดำเสมอในหน้ารายละเอียด */
+        #header a, #header button, #header div > a, #header div > button { color: black; }
+        #header #lang-menu a { color: black !important; }
+        #services-dropdown-content * { color: black !important; }
+        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
+        
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .faq-question {
+            transition: background-color 0.2s ease-in-out;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
+        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+             <!-- Desktop Menu (Left) -->
+            <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+                <div class="relative group py-5 -my-5">
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Lasers and EBDs -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Regenerative Medicine -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
+            </div>
+            
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Logo Text Section -->
+            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
+                <a href="/index.html">BANGKOK GENESIS</a>
+            </div>
+
+            <!-- Desktop Menu (Right) -->
+            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
+                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
+                <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
+                <div class="relative" id="lang-switcher">
+                    <button onclick="toggleLang()" class="flex items-center space-x-1">
+                        <span>🇬🇧 EN</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-white text-xl uppercase tracking-widest hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-4xl">&times;</button>
+        <a href="#" class="mobile-link">Services</a>
+        <a href="#" class="mobile-link">About Us</a>
+        <a href="#" class="mobile-link">Reviews</a>
+        <a href="#" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section for Sculptra -->
+        <section class="relative bg-gray-100">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+                <div class="py-16 md:py-32">
+                    <p class="text-sm uppercase tracking-widest text-gray-500">Injectables Program</p>
+                    <h1 class="text-5xl md:text-7xl mt-2">Sculptra</h1>
+                    <p class="mt-4 max-w-lg text-gray-600 font-light text-lg">The art of gradual rejuvenation. Rebuild your skin's foundation with the power of collagen stimulation for long-lasting, natural results.</p>
+                </div>
+                <div class="hidden md:block h-full">
+                    <img src="https://placehold.co/800x1000/D6FFD6/333?text=Collagen+Stimulation" class="w-full h-full object-cover" alt="Sculptra treatment illustration">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Article Section -->
+        <div class="container mx-auto px-6 py-16 md:py-24 max-w-4xl">
+
+            <!-- What is Sculptra -->
+            <section class="fade-in-section grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-serif">What is Sculptra?</h2>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Sculptra is a unique, FDA-approved injectable that works subtly and gradually over time for a more youthful-looking appearance. Unlike traditional fillers, Sculptra is a collagen stimulator. It is made from Poly-L-lactic acid (PLLA), a biocompatible substance that helps to restore the deep, underlying structure of the skin to diminish facial wrinkles.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/600x600/F0FFF0/333?text=Gradual+Results" class="rounded-lg shadow-xl" alt="Conceptual image of collagen strands rebuilding">
+                </div>
+            </section>
+
+            <!-- The Benefits -->
+            <section class="fade-in-section text-center mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif">The Genesis Approach to Sculptra</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">We use Sculptra to treat the root causes of aging, not just the symptoms.</p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="text-center p-4">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4">
+                           <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold">Long-Lasting</h3>
+                        <p class="text-sm text-gray-600 mt-1">Results can last more than two years, far longer than many other injectables.</p>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="text-center p-4">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="font-bold">Natural Appearance</h3>
+                        <p class="text-sm text-gray-600 mt-1">Works with your body to revitalize collagen, ensuring results are always naturally you.</p>
+                    </div>
+                    <!-- Benefit 3 -->
+                    <div class="text-center p-4">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold">Overall Improvement</h3>
+                        <p class="text-sm text-gray-600 mt-1">Improves skin texture, firmness, and thickness for a comprehensive anti-aging effect.</p>
+                    </div>
+                </div>
+            </section>
+            
+             <!-- Preparation and Aftercare -->
+            <section class="fade-in-section grid md:grid-cols-2 gap-8 md:gap-12 mb-24">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h2 class="text-2xl md:text-3xl font-serif">Preparation</h2>
+                    <ul class="mt-4 space-y-3">
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Similar to other injectables, avoid blood thinners and alcohol before your appointment.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Discuss your full medical history with our doctors during the consultation.</li>
+                    </ul>
+                </div>
+                 <div class="bg-gray-50 p-8 rounded-lg">
+                    <h2 class="text-2xl md:text-3xl font-serif">The 5-5-5 Aftercare Rule</h2>
+                     <ul class="mt-4 space-y-3">
+                        <li class="flex items-start"><span class="text-blue-500 mr-3 mt-1">✓</span> **Massage** the treated area for **5 minutes**.</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-3 mt-1">✓</span> Do this **5 times a day**.</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-3 mt-1">✓</span> Continue for **5 days** to ensure even distribution.</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!-- FAQ Section -->
+            <section class="fade-in-section max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif text-center mb-8">Frequently Asked Questions</h2>
+                <div class="space-y-4" id="faq-container">
+                    <!-- FAQ 1 -->
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">How is Sculptra different from fillers?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">Hyaluronic acid fillers are gels that fill in lines for instant results. Sculptra is a stimulator that helps your skin create its own new collagen, leading to gradual and more natural-looking volume restoration.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                     <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">When will I see results?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">Because Sculptra works by stimulating your own collagen, results appear gradually over a few months. Most patients require a series of treatments (typically 3) spaced 4-6 weeks apart to achieve the desired outcome.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                     <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">How long do the results last?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                           <p class="pt-2 border-t">The results from Sculptra are very long-lasting. Clinical studies have shown results can last for more than two years after the initial treatment series is complete.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== FOOT MENU START ===== -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div>
+                     <h3 class="text-xl font-semibold tracking-widest uppercase mb-4">LOCATION</h3>
+                     <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+                <!-- Contact Info & Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">CONTACT</h3>
+                        <div class="text-sm leading-relaxed mt-4">
+                            <p>2nd Floor, The Crystal SB Ratchapruek</p>
+                            <p>Nonthaburi, Thailand</p>
+                            <p class="mt-4">Tel: 092-369-0456</p>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
+                        <div class="text-sm uppercase tracking-wider leading-loose mt-4">
+                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
+                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
+                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
+                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
+                        </div>
+                    </div>
+                     <div class="sm:col-span-2">
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
+                         <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
+                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2025 BANGKOK GENESIS CLINIC. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== FOOT MENU END ===== -->
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Language switcher & Mobile Menu Logic
+            // ... (same as previous files)
+
+            // FAQ Accordion Logic
+            const faqContainer = document.getElementById('faq-container');
+            if(faqContainer) {
+                const questions = faqContainer.querySelectorAll('.faq-question');
+                questions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        const icon = question.querySelector('svg');
+
+                        // Close all other open answers
+                        questions.forEach(q => {
+                            if (q !== question) {
+                                q.nextElementSibling.style.maxHeight = null;
+                                q.querySelector('svg').style.transform = 'rotate(0deg)';
+                            }
+                        });
+
+                        if (answer.style.maxHeight) {
+                            answer.style.maxHeight = null;
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                });
+            }
+
+            // Fade-in on scroll Logic
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            const sectionsToFade = document.querySelectorAll('.fade-in-section');
+            sectionsToFade.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>

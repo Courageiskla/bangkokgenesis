@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva La Bella - IV Therapy - Bangkok Genesis Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        #header a, #header button, #header div > a, #header div > button { color: black; }
+        #header #lang-menu a { color: black !important; }
+        #services-dropdown-content * { color: black !important; }
+        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .faq-question {
+            transition: background-color 0.2s ease-in-out;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+        .carousel-slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
+        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+            <!-- Desktop Menu (Left) -->
+            <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+                <div class="relative group py-5 -my-5">
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Lasers and EBDs -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Regenerative Medicine -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
+            </div>
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Logo Text Section -->
+            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
+                <a href="/index.html">BANGKOK GENESIS</a>
+            </div>
+
+            <!-- Desktop Menu (Right) -->
+            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
+                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
+                <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
+                <div class="relative" id="lang-switcher">
+                    <button onclick="toggleLang()" class="flex items-center space-x-1">
+                        <span>🇬🇧 EN</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-white text-xl uppercase tracking-widest hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-4xl">&times;</button>
+        <a href="#" class="mobile-link">Services</a>
+        <a href="#" class="mobile-link">About Us</a>
+        <a href="#" class="mobile-link">Reviews</a>
+        <a href="#" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section for Viva La Bella -->
+        <section class="relative bg-gray-100">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+                <div class="py-16 md:py-32">
+                    <p class="text-sm uppercase tracking-widest text-gray-500">Regenerative Medicine Program</p>
+                    <h1 class="text-5xl md:text-7xl mt-2">Viva La Bella</h1>
+                    <p class="mt-4 max-w-lg text-gray-600 font-light text-lg">An intravenous vitamin therapy program for beautiful, healthy, and naturally radiant skin, fortified to combat sun exposure and pollution.</p>
+                </div>
+                <div class="hidden md:block h-full">
+                    <img src="https://placehold.co/800x1000/FADADD/333?text=Radiant+Skin+IV" class="w-full h-full object-cover" alt="Viva La Bella IV Therapy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Section -->
+        <div class="container mx-auto px-6 py-16 md:py-24 max-w-4xl">
+
+            <!-- What is Viva La Bella -->
+            <section class="fade-in-section grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-serif">Radiance From Within</h2>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Viva La Bella is a premium intravenous (IV) vitamin program designed to nourish your skin from the inside out. It features three distinct formulas with varying concentrations of essential nutrients. The goal is to achieve beautiful, healthy, and naturally radiant skin all over the body while strengthening its defense against environmental stressors. Treatments can be done every 1-2 weeks, or as recommended by our doctor.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/600x600/FFF0F5/333?text=IV+Therapy" class="rounded-lg shadow-xl" alt="Conceptual image of IV Vitamin Therapy">
+                </div>
+            </section>
+
+            <!-- Benefits -->
+            <section class="fade-in-section text-center mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif">Comprehensive Skin Rejuvenation</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">Our Viva La Bella program addresses a wide range of skin concerns, promoting a luminous, healthy glow from head to toe.</p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg text-left">
+                        <h3 class="font-bold text-lg">Skin Health & Appearance</h3>
+                        <ul class="mt-3 space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Promotes a naturally radiant and brighter complexion.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Evens out skin tone and reduces dullness.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Stimulates collagen and elastin for firmer skin.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Nourishes skin health at a cellular level.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-left">
+                        <h3 class="font-bold text-lg">Protection & Wellness</h3>
+                        <ul class="mt-3 space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Strengthens resilience against sun and pollution.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Fights free radical damage and premature aging.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> Boosts the body's immune system.</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-3 mt-1">✓</span> 99% nutrient absorption for immediate benefits.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Formulas Carousel -->
+            <section class="fade-in-section text-center mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif">Three Tailored Formulas</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">Viva La Bella offers three distinct formulas, each with a different concentration of premium vitamins to target your specific skin goals.</p>
+                
+                <div id="formulas-carousel" class="relative mt-12 min-h-[300px] rounded-lg overflow-hidden">
+                    <!-- Carousel Slides -->
+                    <div class="carousel-slide">
+                         <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-gray-50 p-8">
+                            <img src="https://placehold.co/600x400/FFE5B4/333?text=Vital+C" class="rounded-lg shadow-lg w-full" alt="Vital C Formula">
+                            <div class="text-left">
+                                <h3 class="font-bold text-2xl text-orange-600 font-serif">Vital C</h3>
+                                <p class="text-gray-700 mt-4 leading-relaxed">A concentrated blend of Vitamin C and collagen to restore skin balance, reduce free radicals, and boost immunity. Ideal for antioxidant protection and firmer skin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide hidden">
+                        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-gray-50 p-8">
+                            <img src="https://placehold.co/600x400/FFC0CB/333?text=Luminess+Clarifique" class="rounded-lg shadow-lg w-full" alt="Luminess Clarifique Formula">
+                            <div class="text-left">
+                                <h3 class="font-bold text-2xl text-pink-600 font-serif">Luminess Clarifique</h3>
+                                <p class="text-gray-700 mt-4 leading-relaxed">A special formula designed to create antioxidant balance for a brighter, clearer complexion. Perfect for achieving that luminous 'aura' and an even skin tone.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide hidden">
+                         <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-gray-50 p-8">
+                            <img src="https://placehold.co/600x400/FF7F7F/333?text=Genesique+Totale" class="rounded-lg shadow-lg w-full" alt="Genesique Totale Formula">
+                            <div class="text-left">
+                                <h3 class="font-bold text-2xl text-red-700 font-serif">Genesique Totale</h3>
+                                <p class="text-gray-700 mt-4 leading-relaxed">The ultimate skin health formula. Packed with essential nutrients to revive dull skin, repair sun damage, and inhibit melanin production for a flawless, healthy glow.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Navigation -->
+                    <button id="prev-formula" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/60 text-gray-900 rounded-full p-2 shadow-md hover:bg-white transition z-10">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-formula" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/60 text-gray-900 rounded-full p-2 shadow-md hover:bg-white transition z-10">
+                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- The Procedure Journey -->
+            <section class="fade-in-section text-center mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif">Your IV Therapy Journey</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">Our process is simple, comfortable, and overseen by medical professionals to ensure your safety and optimal results.</p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center p-4">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        </div>
+                        <h3 class="font-bold">1. Consultation</h3>
+                        <p class="text-sm text-gray-600 mt-1">Our doctor will assess your skin and health goals to recommend the most suitable formula.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="text-center p-4">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4">
+                             <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10H4.222a2 2 0 00-1.948 1.527l-1.222 6A2 2 0 003 22h11a2 2 0 002-2v- पॉइंट5a2 2 0 00-2-2H9.5M14 10V4a2 2 0 00-2-2h-1a2 2 0 00-2 2v6m3-10l-3 3m0 0l-3-3m3 3V0"></path></svg>
+                        </div>
+                        <h3 class="font-bold">2. Preparation</h3>
+                        <p class="text-sm text-gray-600 mt-1">Relax in our comfortable room as we prepare your personalized vitamin drip.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="text-center p-4">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-bold">3. Infusion</h3>
+                        <p class="text-sm text-gray-600 mt-1">The nutrient-rich solution is administered over 30-60 minutes for max absorption.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="text-center p-4">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-gray-100 mx-auto mb-4">
+                           <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M15 3v4M13 5h4M11 15.586V18h2v-2.414l5.293-5.293a1 1 0 00-1.414-1.414L13 12.586l-1.293-1.293a1 1 0 00-1.414 1.414L11 15.586z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 21H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v6"></path></svg>
+                        </div>
+                        <h3 class="font-bold">4. Rejuvenation</h3>
+                        <p class="text-sm text-gray-600 mt-1">Return to your daily activities with zero downtime, feeling refreshed and revitalized.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="fade-in-section max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif text-center mb-8">Frequently Asked Questions</h2>
+                <div class="space-y-4" id="faq-container">
+                    <!-- FAQ 1 -->
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">How often should I get a Viva La Bella treatment?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">For optimal results, we generally recommend a session every 1-2 weeks. However, the exact frequency will be personalized by our doctor based on your specific skin needs and goals.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">Is the IV Drip procedure painful?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">The procedure involves a small needle prick, similar to a blood test, which causes minimal discomfort. The infusion itself is painless, and many patients find the experience relaxing.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">When will I see results?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">Many patients report feeling more energized and refreshed immediately after the treatment. Visible improvements in skin radiance and texture typically become more apparent after a few sessions as your body utilizes the nutrients.</p>
+                        </div>
+                    </div>
+                     <!-- FAQ 4 -->
+                    <div class="border rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 hover:bg-gray-50">
+                            <span class="font-semibold text-lg">Who is a good candidate for this treatment?</span>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-gray-600">
+                            <p class="pt-2 border-t">Viva La Bella is suitable for individuals wanting to improve their overall skin health, achieve a brighter complexion, and protect their skin from environmental stressors. A consultation with our doctor will determine if this treatment is right for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== FOOT MENU START ===== -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div>
+                     <h3 class="text-xl font-semibold tracking-widest uppercase mb-4">LOCATION</h3>
+                     <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+                <!-- Contact Info & Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">CONTACT</h3>
+                        <div class="text-sm leading-relaxed mt-4">
+                            <p>2nd Floor, The Crystal SB Ratchapruek</p>
+                            <p>Nonthaburi, Thailand</p>
+                            <p class="mt-4">Tel: 092-369-0456</p>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
+                        <div class="text-sm uppercase tracking-wider leading-loose mt-4">
+                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
+                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
+                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
+                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
+                        </div>
+                    </div>
+                     <div class="sm:col-span-2">
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
+                         <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
+                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2025 BANGKOK GENESIS CLINIC. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== FOOT MENU END ===== -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Language switcher
+            window.toggleLang = function() {
+                document.getElementById('lang-menu').classList.toggle('hidden');
+            }
+            document.addEventListener('click', function(e) {
+                const langSwitcher = document.getElementById('lang-switcher');
+                if (langSwitcher && !langSwitcher.contains(e.target)) {
+                    document.getElementById('lang-menu').classList.add('hidden');
+                }
+            });
+
+            // Mobile Menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                });
+            }
+            if(closeMobileMenu) {
+                closeMobileMenu.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            }
+
+
+            // FAQ Accordion Logic
+            const faqContainer = document.getElementById('faq-container');
+            if(faqContainer) {
+                const questions = faqContainer.querySelectorAll('.faq-question');
+                questions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        const icon = question.querySelector('svg');
+                        const isExpanded = answer.style.maxHeight;
+
+                        // Close all other answers
+                        questions.forEach(q => {
+                            if (q !== question) {
+                                q.nextElementSibling.style.maxHeight = null;
+                                q.nextElementSibling.style.paddingBottom = '0px';
+                                q.querySelector('svg').style.transform = 'rotate(0deg)';
+                            }
+                        });
+
+                        // Open or close the clicked one
+                        if (isExpanded) {
+                            answer.style.maxHeight = null;
+                            answer.style.paddingBottom = '0px';
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                            answer.style.paddingBottom = '1.25rem';
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                });
+            }
+
+            // Fade-in on scroll Logic
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const sectionsToFade = document.querySelectorAll('.fade-in-section');
+            sectionsToFade.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Formula Carousel Logic
+            const carousel = document.getElementById('formulas-carousel');
+            if (carousel) {
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const prevButton = document.getElementById('prev-formula');
+                const nextButton = document.getElementById('next-formula');
+                const dotsContainer = document.createElement('div');
+                dotsContainer.id = 'carousel-dots';
+                dotsContainer.className = 'absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3 z-10';
+                carousel.appendChild(dotsContainer);
+
+                let currentSlide = 0;
+                let autoPlayInterval;
+
+                // Create dots
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'w-3 h-3 bg-white/50 rounded-full transition hover:bg-white';
+                    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                    dot.addEventListener('click', () => {
+                        showSlide(i);
+                        resetAutoPlay();
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+                
+                const dots = dotsContainer.querySelectorAll('button');
+
+                function updateDots(index) {
+                    dots.forEach((dot, i) => {
+                        if (i === index) {
+                            dot.classList.add('bg-white');
+                            dot.classList.remove('bg-white/50');
+                        } else {
+                            dot.classList.remove('bg-white');
+                            dot.classList.add('bg-white/50');
+                        }
+                    });
+                }
+
+                function showSlide(index) {
+                    slides.forEach((slide) => {
+                        slide.classList.add('hidden');
+                    });
+                    if (slides[index]) {
+                        slides[index].classList.remove('hidden');
+                    }
+                    currentSlide = index;
+                    updateDots(index);
+                }
+
+                function nextSlide() {
+                    const nextIndex = (currentSlide + 1) % slides.length;
+                    showSlide(nextIndex);
+                }
+
+                function prevSlide() {
+                    const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(prevIndex);
+                }
+                
+                function startAutoPlay() {
+                    autoPlayInterval = setInterval(nextSlide, 5000);
+                }
+
+                function resetAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                    startAutoPlay();
+                }
+
+                prevButton.addEventListener('click', () => {
+                    prevSlide();
+                    resetAutoPlay();
+                });
+
+                nextButton.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoPlay();
+                });
+
+                // Initialize
+                showSlide(0);
+                startAutoPlay();
+            }
+        });
+    </script>
+
+</body>
+</html>
+

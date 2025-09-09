@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Doctor - Bangkok Genesis Clinic</title>
+    <title>Laser & EBDs Services - Bangkok Genesis Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
-        /* Ensure header text is always black on detail pages */
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        /* ทำให้ Header เป็นสีดำเสมอในหน้ารายละเอียด */
         #header a, #header button, #header div > a, #header div > button { color: black; }
         #header #lang-menu a { color: black !important; }
         #services-dropdown-content * { color: black !important; }
         .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
-        .btn-primary { @apply mt-8 inline-block px-10 py-3 border border-black text-black font-semibold tracking-wider uppercase text-sm hover:bg-black hover:text-white transition-colors duration-300; }
+        .service-card-title { @apply absolute bottom-0 left-0 w-full p-6 text-white text-2xl font-serif bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:opacity-0; }
+        .service-card-overlay { @apply absolute inset-0 bg-white bg-opacity-95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300; }
+        .btn-card { @apply mt-4 inline-block px-6 py-2 border border-black text-black font-semibold tracking-wider uppercase text-xs hover:bg-black hover:text-white transition-colors; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <!-- Header & Navigation -->
     <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
         <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
-             <!-- Desktop Menu (Left) -->
-            <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+             <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
                 <div class="relative group py-5 -my-5">
                     <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
                     <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
@@ -74,23 +74,19 @@
                 <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
             </div>
             
-            <!-- Mobile Hamburger Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
 
-            <!-- Logo Text Section -->
             <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
                 <a href="/index.html">BANGKOK GENESIS</a>
             </div>
 
-            <!-- Desktop Menu (Right) -->
             <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
-                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity font-bold">Our Doctors</a>
+                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
                 <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
-                <!-- Language Switcher -->
                 <div class="relative" id="lang-switcher">
                     <button onclick="toggleLang()" class="flex items-center space-x-1">
                         <span>🇬🇧 EN</span>
@@ -104,91 +100,58 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="pt-16 md:pt-24">
-
-        <!-- Doctor Hero Section -->
-        <section class="container mx-auto px-6 py-12 md:py-20">
-            <div class="grid md:grid-cols-5 gap-12 items-center">
-                <div class="md:col-span-2">
-                    <img src="src/drpume.png" class="w-full h-auto object-cover rounded-lg shadow-2xl" alt="Dr. Pume Vattanavanapong, Medical Director of Bangkok Genesis Clinic">
-                </div>
-                <div class="md:col-span-3">
-                    <p class="text-sm uppercase tracking-widest text-gray-500">Medical Director & Co-Founder</p>
-                    <h1 class="text-5xl md:text-6xl mt-2 font-serif">Dr. Pume Vattanavanapong</h1>
-                    <h2 class="mt-6 text-xl md:text-2xl font-serif text-gray-700 italic">"Where science perfects beauty, and longevity is an art."</h2>
-                    <p class="mt-8 text-gray-600 font-light leading-relaxed">
-                        Dr. Pume Vattanavanapong is the visionary Medical Director at the heart of Bangkok Genesis Clinic. A physician celebrated for his profound understanding of aesthetic harmony and a relentless pursuit of medical innovation, he embodies the clinic's core philosophy: that true beauty is achieved when scientific precision meets bespoke artistry. His approach is not merely about treatment, but about transformation—crafting results that are both breathtakingly beautiful and authentically you.
-                    </p>
-                    <a href="#consultation" class="btn-primary">Consult with Dr. Pume</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- A Legacy of Excellence Section -->
-        <section class="bg-white py-20">
+        <section class="bg-white py-16 text-center">
             <div class="container mx-auto px-6">
-                <div class="text-center max-w-4xl mx-auto">
-                    <h3 class="text-4xl font-serif">A Legacy of Excellence & Global Mastery</h3>
-                    <p class="mt-6 text-gray-600 font-light leading-relaxed">
-                        Dr. Pume's journey is one of continuous and distinguished scholarship. His foundational expertise was forged at the prestigious Faculty of Medicine, Ramathibodi Hospital, and further honed through elite training programs in cosmetic dermatology and laser therapy. He is a master of the most advanced aesthetic techniques, from the intricate art of 6D-Rhinoplasty and advanced midface dermal filler injections to achieving full-face harmony with botulinum toxin and bio-stimulators.
-                    </p>
-                    <p class="mt-4 text-gray-600 font-light leading-relaxed">
-                       Beyond aesthetic refinement, Dr. Pume is a board-certified luminary in the science of longevity. With a coveted certification from the American Academy of Anti-Aging Medicine (A4M), he pioneers regenerative strategies and advanced therapies that restore vitality from the cellular level. His pursuit of knowledge is global; Dr. Pume is a distinguished presence at the world's most influential aesthetic congresses, from the International Congress of Aesthetic Dermatology (ICAD) to the World Congress of Aesthetic Surgery & Medicine (WCAM), ensuring he brings the future of aesthetic and regenerative medicine to his patients today.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Certifications & Training Section -->
-        <section class="container mx-auto px-6 py-20">
-            <div class="text-center">
-                <h3 class="text-4xl font-serif">Certifications & Advanced Training</h3>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">A commitment to the highest global standards of medical aesthetics and anti-aging science.</p>
-            </div>
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-                <!-- Column 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h4 class="font-serif text-xl font-bold mb-4 border-b pb-2">Board Certifications</h4>
-                    <ul class="space-y-3 mt-4 text-sm text-gray-600 font-light">
-                        <li>Board Certified Physician, American Academy of Anti-Aging Medicine (A4M)</li>
-                        <li>Distance Curriculum of Aesthetic Practice, TAACSM</li>
-                        <li>Chelation Therapy Certified, Chelation Medical Association Thailand (CMAT)</li>
-                    </ul>
-                </div>
-                <!-- Column 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h4 class="font-serif text-xl font-bold mb-4 border-b pb-2">Advanced Specializations</h4>
-                    <ul class="space-y-3 mt-4 text-sm text-gray-600 font-light">
-                        <li>Cosmetic Dermatology, Faculty of Medicine Ramathibodi Hospital</li>
-                        <li>Advanced Midface Dermal Filler Injection, American Board of Laser Surgery</li>
-                        <li>Advanced Botulinum Toxin, Aesthetic Concept Academy</li>
-                        <li>Skin Laser Therapy in Clinical Practice, Aesthetic Concept Academy</li>
-                         <li>Surgical Procedures including 6D-Rhinoplasty, Blepharoplasty, & Mentoplasty</li>
-                    </ul>
-                </div>
-                <!-- Column 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                     <h4 class="font-serif text-xl font-bold mb-4 border-b pb-2">International Congress</h4>
-                    <ul class="space-y-3 mt-4 text-sm text-gray-600 font-light">
-                        <li>World Congress of Aesthetic Surgery & Medicine (WCAM)</li>
-                        <li>International Congress of Aesthetic Dermatology (ICAD)</li>
-                        <li>American Academy of Anti-Aging Medicine (A4M) Symposium</li>
-                        <li>Dermatology Symposium for ASEAN Community (DSAC)</li>
-                        <li>Annual Meeting of TAARM</li>
-                    </ul>
-                </div>
+                <p class="text-sm uppercase tracking-widest text-gray-500">Our Services</p>
+                <h1 class="text-5xl md:text-7xl mt-2">Laser & EBDs</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">Utilize cutting-edge energy-based devices to rejuvenate and resurface your skin. Our advanced treatments target a variety of concerns for a clearer, firmer, and more youthful complexion.</p>
             </div>
         </section>
 
-        <!-- Call to Action Section -->
-        <section id="consultation" class="bg-white py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h3 class="text-4xl font-serif">Begin Your Genesis with Dr. Pume</h3>
-                <p class="mt-4 max-w-xl mx-auto text-gray-600 font-light">
-                    Your journey to rediscovering your most radiant self begins with a conversation. We invite you to schedule a private consultation with Dr. Pume and experience the Genesis difference firsthand.
-                </p>
-                <a href="#" class="btn-primary">Book a Consultation</a>
+        <section class="container mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/C2DFFF/333?text=Ulthera+SPT" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Ulthera SPT Treatment">
+                    <div class="service-card-title">Ulthera SPT</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Ulthera SPT</h4>
+                        <p class="mt-2 text-sm text-gray-600">The gold standard in non-invasive lifting, using focused ultrasound to tighten skin from deep within.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/FFD8C2/333?text=Oligio" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Oligio Treatment">
+                    <div class="service-card-title">Oligio</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Oligio</h4>
+                        <p class="mt-2 text-sm text-gray-600">Advanced monopolar radiofrequency to lift, tighten, and stimulate collagen with enhanced comfort.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/D4C2FF/333?text=Potenza" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Potenza Treatment">
+                    <div class="service-card-title">Potenza</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Potenza</h4>
+                        <p class="mt-2 text-sm text-gray-600">Combines microneedling and RF to resurface skin, tighten pores, and improve texture.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+
+                 <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/600x700/C2FFD8/333?text=Long+pulse+ND+yag" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Long pulse ND yag Treatment">
+                    <div class="service-card-title">Long pulse ND yag</div>
+                    <div class="service-card-overlay">
+                        <h4 class="text-xl font-serif font-bold">Long pulse ND yag</h4>
+                        <p class="mt-2 text-sm text-gray-600">A versatile laser for hair removal and skin rejuvenation, safe for a wide range of skin tones.</p>
+                        <div class="btn-card">Learn More</div>
+                    </div>
+                </a>
+                
             </div>
         </section>
     </main>
@@ -245,12 +208,23 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-white', 'shadow-md', 'scrolled-header');
+                    header.classList.remove('top-header');
+                } else {
+                    header.classList.remove('bg-white', 'shadow-md', 'scrolled-header');
+                    header.classList.add('top-header');
+                }
+            });
+
             // Language switcher
             window.toggleLang = function() {
                 document.getElementById('lang-menu').classList.toggle('hidden');
             }
             
-            // Close language switcher if clicked outside
             window.addEventListener('click', function(e) {
                 const langSwitcher = document.getElementById('lang-switcher');
                 if (langSwitcher && !langSwitcher.contains(e.target)) {
@@ -258,11 +232,27 @@
                 }
             });
 
-            // Mobile Menu Logic (placeholder for potential mobile menu)
-            // const mobileMenuButton = document.getElementById('mobile-menu-button');
-            // if (mobileMenuButton) {
-            //     // Add mobile menu logic here if needed
-            // }
+            // Mobile Menu Logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            const openMenu = () => {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+            };
+
+            const closeMenu = () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            };
+
+            mobileMenuButton.addEventListener('click', openMenu);
+            closeMobileMenuButton.addEventListener('click', closeMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
         });
     </script>
 </body>

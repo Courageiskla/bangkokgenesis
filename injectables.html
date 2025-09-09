@@ -3,80 +3,125 @@
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Injectable Services - Bangkok Genesis Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <style>
-        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        body {
+            font-family: "Manrope", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-serif {
+            font-family: "Playfair Display", serif;
+        }
+
         /* ทำให้ Header เป็นสีดำเสมอในหน้ารายละเอียด */
-        #header a, #header button, #header div > a, #header div > button { color: black; }
-        #header #lang-menu a { color: black !important; }
-        #services-dropdown-content * { color: black !important; }
-        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
-        .service-card-title { @apply absolute bottom-0 left-0 w-full p-6 text-white text-2xl font-serif bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:opacity-0; }
-        .service-card-overlay { @apply absolute inset-0 bg-white bg-opacity-95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300; }
-        .btn-card { @apply mt-4 inline-block px-6 py-2 border border-black text-black font-semibold tracking-wider uppercase text-xs hover:bg-black hover:text-white transition-colors; }
+        #header a,
+        #header button,
+        #header div>a,
+        #header div>button {
+            color: black;
+        }
+
+        #header #lang-menu a {
+            color: black !important;
+        }
+
+        #services-dropdown-content * {
+            color: black !important;
+        }
+
+        .dropdown-item {
+            @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200;
+        }
+
+        .service-card-title {
+            @apply absolute bottom-0 left-0 w-full p-6 text-white text-2xl font-serif bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:opacity-0;
+        }
+
+        .service-card-overlay {
+            @apply absolute inset-0 bg-white bg-opacity-95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+        }
+
+        .btn-card {
+            @apply mt-4 inline-block px-6 py-2 border border-black text-black font-semibold tracking-wider uppercase text-xs hover:bg-black hover:text-white transition-colors;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
 
+<body class="bg-gray-50 text-gray-900">
     <!-- Header & Navigation -->
     <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
         <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
-             <!-- Desktop Menu (Left) -->
+            <!-- Desktop Menu (Left) -->
             <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
                 <div class="relative group py-5 -my-5">
-                    <a href="#" class="inline-block hover:opacity-70 transition-opacity font-bold">Services</a>
-                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[800px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
-                        <div class="grid grid-cols-3 gap-x-8">
-                               <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Injectables</a></h3>
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
                                 <ul class="space-y-2 mt-4">
-                                    <li><a href="#" class="dropdown-item">Botox</a></li>
-                                    <li><a href="#" class="dropdown-item">Filler</a></li>
-                                    <li><a href="#" class="dropdown-item">Sculptra</a></li>
-                                    <li><a href="#" class="dropdown-item">Radiesse</a></li>
-                                    <li><a href="#" class="dropdown-item">Juvelook</a></li>
-                                    <li><a href="#" class="dropdown-item">Mesotherapy</a></li>
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
                                 </ul>
                             </div>
                             <!-- Column 2: Lasers and EBDs -->
                             <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Laser & EBDs</a></h3>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
                                 <ul class="space-y-2 mt-4">
-                                    <li><a href="#" class="dropdown-item">Ulthera SPT</a></li>
-                                    <li><a href="#" class="dropdown-item">Oligio</a></li>
-                                    <li><a href="#" class="dropdown-item">Potenza</a></li>
-                                    <li><a href="#" class="dropdown-item">Long pulse ND yag</a></li>
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
                                 </ul>
                             </div>
-                            <!-- Column 3: Regenerative Medicines -->
+                            <!-- Column 3: Regenerative Medicine -->
                             <div>
-                                 <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Regenerative Medicine</a></h3>
-                                 <ul class="space-y-2 mt-4">
-                                    <li><a href="#" class="dropdown-item">Viva la vida</a></li>
-                                    <li><a href="#" class="dropdown-item">Viva la bella</a></li>
-                                    <li><a href="#" class="dropdown-item">MSCs and Stem Cell</a></li>
-                                    <li><a href="#" class="dropdown-item">Penthin</a></li>
-                                    <li><a href="#" class="dropdown-item">Treatment Therapy</a></li>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="hover:opacity-70 transition-opacity">About Us</a>
+                <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
             </div>
-            
+
             <!-- Mobile Hamburger Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
                 </button>
             </div>
 
@@ -87,13 +132,17 @@
 
             <!-- Desktop Menu (Right) -->
             <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
-                <a href="#" class="hover:opacity-70 transition-opacity">Reviews</a>
-                <a href="#" class="hover:opacity-70 transition-opacity">Contact</a>
+                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
+                <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
                 <!-- Language Switcher -->
                 <div class="relative" id="lang-switcher">
                     <button onclick="toggleLang()" class="flex items-center space-x-1">
                         <span>🇬🇧 EN</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                     </button>
                     <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
                         <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
@@ -108,87 +157,122 @@
         <!-- Page Title Section -->
         <section class="bg-white py-16 text-center">
             <div class="container mx-auto px-6">
-                <p class="text-sm uppercase tracking-widest text-gray-500">Our Services</p>
+                <p class="text-sm uppercase tracking-widest text-gray-500">
+                    Our Services
+                </p>
                 <h1 class="text-5xl md:text-7xl mt-2">Injectables</h1>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">Enhance your natural beauty and restore youthful volume with our range of premium injectable treatments, administered by expert medical professionals.</p>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">
+                    Enhance your natural beauty and restore youthful volume with our
+                    range of premium injectable treatments, administered by expert
+                    medical professionals.
+                </p>
             </div>
         </section>
 
         <!-- Services Grid Section -->
         <section class="container mx-auto px-6 py-20">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
                 <!-- Botox Card -->
                 <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://placehold.co/600x700/D6E4FF/333?text=Botox" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Botox Treatment">
+                    <img src="https://placehold.co/600x700/D6E4FF/333?text=Botox"
+                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        alt="Botox Treatment" />
                     <div class="service-card-title">Botox</div>
                     <div class="service-card-overlay">
                         <h4 class="text-xl font-serif font-bold">Botox</h4>
-                        <p class="mt-2 text-sm text-gray-600">Relax facial muscles to reduce wrinkles and fine lines for a smoother, youthful appearance.</p>
+                        <p class="mt-2 text-sm text-gray-600">
+                            Relax facial muscles to reduce wrinkles and fine lines for a
+                            smoother, youthful appearance.
+                        </p>
                         <div class="btn-card">Learn More</div>
                     </div>
                 </a>
 
                 <!-- Filler Card -->
                 <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://placehold.co/600x700/FFE4D6/333?text=Filler" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Filler Treatment">
+                    <img src="https://placehold.co/600x700/FFE4D6/333?text=Filler"
+                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        alt="Filler Treatment" />
                     <div class="service-card-title">Filler</div>
                     <div class="service-card-overlay">
                         <h4 class="text-xl font-serif font-bold">Filler</h4>
-                        <p class="mt-2 text-sm text-gray-600">Restore volume and contours, enhancing features and diminishing deep facial lines.</p>
+                        <p class="mt-2 text-sm text-gray-600">
+                            Restore volume and contours, enhancing features and diminishing
+                            deep facial lines.
+                        </p>
                         <div class="btn-card">Learn More</div>
                     </div>
                 </a>
 
                 <!-- Sculptra Card -->
                 <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://placehold.co/600x700/D6FFD6/333?text=Sculptra" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Sculptra Treatment">
+                    <img src="https://placehold.co/600x700/D6FFD6/333?text=Sculptra"
+                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        alt="Sculptra Treatment" />
                     <div class="service-card-title">Sculptra</div>
                     <div class="service-card-overlay">
                         <h4 class="text-xl font-serif font-bold">Sculptra</h4>
-                        <p class="mt-2 text-sm text-gray-600">Stimulate your skin's natural collagen production for gradual, long-lasting facial rejuvenation.</p>
+                        <p class="mt-2 text-sm text-gray-600">
+                            Stimulate your skin's natural collagen production for gradual,
+                            long-lasting facial rejuvenation.
+                        </p>
                         <div class="btn-card">Learn More</div>
                     </div>
                 </a>
 
-                 <!-- Radiesse Card -->
+                <!-- Radiesse Card -->
                 <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://placehold.co/600x700/FFF5D6/333?text=Radiesse" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Radiesse Treatment">
+                    <img src="https://placehold.co/600x700/FFF5D6/333?text=Radiesse"
+                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        alt="Radiesse Treatment" />
                     <div class="service-card-title">Radiesse</div>
                     <div class="service-card-overlay">
                         <h4 class="text-xl font-serif font-bold">Radiesse</h4>
-                        <p class="mt-2 text-sm text-gray-600">Provide an immediate lift and stimulate collagen for improved skin structure and elasticity.</p>
+                        <p class="mt-2 text-sm text-gray-600">
+                            Provide an immediate lift and stimulate collagen for improved
+                            skin structure and elasticity.
+                        </p>
                         <div class="btn-card">Learn More</div>
                     </div>
                 </a>
 
                 <!-- Juvelook Card -->
                 <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://placehold.co/600x700/FFD6F5/333?text=Juvelook" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Juvelook Treatment">
+                    <img src="https://placehold.co/600x700/FFD6F5/333?text=Juvelook"
+                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        alt="Juvelook Treatment" />
                     <div class="service-card-title">Juvelook</div>
                     <div class="service-card-overlay">
                         <h4 class="text-xl font-serif font-bold">Juvelook</h4>
-                        <p class="mt-2 text-sm text-gray-600">A hybrid filler that combines instant, natural volume with long-term collagen stimulation.</p>
+                        <p class="mt-2 text-sm text-gray-600">
+                            A hybrid filler that combines instant, natural volume with
+                            long-term collagen stimulation.
+                        </p>
                         <div class="btn-card">Learn More</div>
                     </div>
                 </a>
 
                 <!-- Mesotherapy Card -->
                 <a href="#" class="group relative block overflow-hidden rounded-lg shadow-lg">
-                    <img src="https://placehold.co/600x700/D6FDFF/333?text=Mesotherapy" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" alt="Mesotherapy Treatment">
+                    <img src="https://placehold.co/600x700/D6FDFF/333?text=Mesotherapy"
+                        class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        alt="Mesotherapy Treatment" />
                     <div class="service-card-title">Mesotherapy</div>
                     <div class="service-card-overlay">
                         <h4 class="text-xl font-serif font-bold">Mesotherapy</h4>
-                        <p class="mt-2 text-sm text-gray-600">Deliver a custom cocktail of vitamins and nutrients directly into the skin for targeted revitalization.</p>
+                        <p class="mt-2 text-sm text-gray-600">
+                            Deliver a custom cocktail of vitamins and nutrients directly
+                            into the skin for targeted revitalization.
+                        </p>
                         <div class="btn-card">Learn More</div>
                     </div>
                 </a>
-
             </div>
         </section>
     </main>
 
-    <  <!-- Footer -->
+    <!-- ===== FOOT MENU START ===== -->
+    <!-- Footer -->
     <footer class="bg-black text-white py-16">
         <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
             <div class="grid md:grid-cols-2 gap-12">
@@ -212,17 +296,20 @@
                      <div>
                         <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
                         <div class="text-sm uppercase tracking-wider leading-loose mt-4">
-                            <a href="#" class="block hover:opacity-70">Services</a>
-                            <a href="#" class="block mt-2 hover:opacity-70">About Us</a>
-                            <a href="#" class="block mt-2 hover:opacity-70">Reviews</a>
+                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
+                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
+                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
+                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
                         </div>
                     </div>
                      <div class="sm:col-span-2">
                         <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
                          <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
-                            <a href="#" class="hover:opacity-100">FACEBOOK</a>
-                            <a href="#" class="hover:opacity-100">INSTAGRAM</a>
-                            <a href="#" class="hover:opacity-100">LINE</a>
+                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
                         </div>
                      </div>
                 </div>
@@ -232,55 +319,58 @@
             </div>
         </div>
     </footer>
+    <!-- ===== FOOT MENU END ===== -->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener("DOMContentLoaded", function () {
             // Header scroll effect
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', () => {
+            const header = document.getElementById("header");
+            window.addEventListener("scroll", () => {
                 if (window.scrollY > 50) {
-                    header.classList.add('bg-white', 'shadow-md', 'scrolled-header');
-                    header.classList.remove('top-header');
+                    header.classList.add("bg-white", "shadow-md", "scrolled-header");
+                    header.classList.remove("top-header");
                 } else {
-                    header.classList.remove('bg-white', 'shadow-md', 'scrolled-header');
-                    header.classList.add('top-header');
+                    header.classList.remove("bg-white", "shadow-md", "scrolled-header");
+                    header.classList.add("top-header");
                 }
             });
 
             // Language switcher
-            window.toggleLang = function() {
-                document.getElementById('lang-menu').classList.toggle('hidden');
-            }
-            
-            window.addEventListener('click', function(e) {
-                const langSwitcher = document.getElementById('lang-switcher');
+            window.toggleLang = function () {
+                document.getElementById("lang-menu").classList.toggle("hidden");
+            };
+
+            window.addEventListener("click", function (e) {
+                const langSwitcher = document.getElementById("lang-switcher");
                 if (langSwitcher && !langSwitcher.contains(e.target)) {
-                    document.getElementById('lang-menu').classList.add('hidden');
+                    document.getElementById("lang-menu").classList.add("hidden");
                 }
             });
 
             // Mobile Menu Logic
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const closeMobileMenuButton =
+                document.getElementById("close-mobile-menu");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileLinks = document.querySelectorAll(".mobile-link");
 
             const openMenu = () => {
-                mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('flex');
+                mobileMenu.classList.remove("hidden");
+                mobileMenu.classList.add("flex");
             };
 
             const closeMenu = () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.add("hidden");
+                mobileMenu.classList.remove("flex");
             };
 
-            mobileMenuButton.addEventListener('click', openMenu);
-            closeMobileMenuButton.addEventListener('click', closeMenu);
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', closeMenu);
+            mobileMenuButton.addEventListener("click", openMenu);
+            closeMobileMenuButton.addEventListener("click", closeMenu);
+            mobileLinks.forEach((link) => {
+                link.addEventListener("click", closeMenu);
             });
         });
     </script>
 </body>
+
 </html>

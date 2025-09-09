@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa & Treatment - Regenerative Medicine - Bangkok Genesis Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        #header a, #header button, #header div > a, #header div > button { color: black; }
+        #header #lang-menu a { color: black !important; }
+        #services-dropdown-content * { color: black !important; }
+        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Carousel Custom Styles */
+        .carousel-button {
+            @apply absolute top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 text-gray-800 hover:bg-opacity-100 transition-all shadow-md;
+        }
+        .carousel-button:disabled {
+            @apply opacity-50 cursor-not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
+        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+            <!-- Desktop Menu (Left) -->
+            <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+                <div class="relative group py-5 -my-5">
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Lasers and EBDs -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Regenerative Medicine -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
+            </div>
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Logo Text Section -->
+            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
+                <a href="/index.html">BANGKOK GENESIS</a>
+            </div>
+
+            <!-- Desktop Menu (Right) -->
+            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
+                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
+                <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
+                <div class="relative" id="lang-switcher">
+                    <button onclick="toggleLang()" class="flex items-center space-x-1">
+                        <span>🇬🇧 EN</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-white text-xl uppercase tracking-widest hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-4xl">&times;</button>
+        <a href="#" class="mobile-link">Services</a>
+        <a href="#" class="mobile-link">About Us</a>
+        <a href="#" class="mobile-link">Reviews</a>
+        <a href="#" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section for Spa & Treatment -->
+        <section class="relative bg-gray-100">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+                <div class="py-16 md:py-32">
+                    <p class="text-sm uppercase tracking-widest text-gray-500">Regenerative Medicine Program</p>
+                    <h1 class="text-5xl md:text-7xl mt-2">La Mer & Clarins Treatment</h1>
+                    <p class="mt-4 max-w-lg text-gray-600 font-light text-lg">Indulge in a bespoke facial experience designed to rejuvenate, firm, and restore your skin's natural radiance. Our treatments utilize the world-renowned skincare excellence of La Mer and Clarins.</p>
+                </div>
+                <div class="hidden md:block h-full">
+                    <img src="https://placehold.co/800x1000/F5F1EF/333?text=Luxury+Facial+Retreat" class="w-full h-full object-cover" alt="Luxury Spa Treatment">
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Section -->
+        <div class="container mx-auto px-6 py-16 md:py-24 max-w-5xl">
+
+            <!-- What are the treatments -->
+            <section class="fade-in-section text-center mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif">Our Signature Treatments</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-gray-600">Choose your path to revitalized skin with our curated selection of facial treatments, available in 60 and 90-minute sessions for a truly personalized escape.</p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                    <div class="bg-gray-50 p-6 rounded-lg text-left">
+                        <h3 class="font-bold text-lg font-serif">La Mer Treatments</h3>
+                        <ul class="mt-3 space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-emerald-500 mr-3 mt-1">✓</span> Signature Facial Treatment (60 min)</li>
+                            <li class="flex items-start"><span class="text-emerald-500 mr-3 mt-1">✓</span> Essential Facial Treatment (90 min)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-left">
+                        <h3 class="font-bold text-lg font-serif">Clarins Treatments</h3>
+                        <ul class="mt-3 space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">✓</span> Firming Facial Treatment (60 min)</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">✓</span> Ultimate Facial Treatment (90 min)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- La Mer Treatment Journey Carousel -->
+            <section class="fade-in-section mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif text-center mb-12">The La Mer Treatment Journey</h2>
+                <div id="la-mer-carousel" class="relative w-full max-w-4xl mx-auto">
+                    <!-- Carousel Slides -->
+                    <div class="overflow-hidden">
+                        <!-- Step 1 -->
+                        <div class="carousel-slide">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/00A79D/FFFFFF?text=La+Mer+Remover" alt="Makeup Remover" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 1 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Makeup Removers</h3>
+                                    <p class="mt-4 text-gray-600">We begin by gently lifting away makeup and impurities from the skin's surface, preparing it for a deep cleanse.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Step 2 -->
+                        <div class="carousel-slide hidden">
+                           <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/00A79D/FFFFFF?text=La+Mer+Cleanser" alt="Cleanser" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 2 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Cleansers</h3>
+                                    <p class="mt-4 text-gray-600">A thorough yet gentle cleanse purifies the skin, removing residual impurities and leaving it feeling fresh and balanced.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/00A79D/FFFFFF?text=La+Mer+Lotion" alt="Treatment Lotion" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 3 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Treatment Lotions</h3>
+                                    <p class="mt-4 text-gray-600">The legendary Treatment Lotion is applied to hydrate, energize, and prep the skin, optimizing it for the steps to follow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/EAEAEA/333?text=Hand+Mask" alt="Hand Mask" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 4 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Hand Mask (Complimentary)</h3>
+                                    <p class="mt-4 text-gray-600">While your face is being pampered, enjoy a complimentary nourishing hand mask to soften and hydrate your hands.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/EAEAEA/333?text=Tuning+Fork" alt="Tuning Fork Therapy" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 5 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Tuning Fork Therapy</h3>
+                                    <p class="mt-4 text-gray-600">Unique to our La Mer treatment, sound vibrations from a tuning fork are used to promote relaxation and enhance product absorption.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 6 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/00A79D/FFFFFF?text=La+Mer+Oil" alt="Essential Oil Massage" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 6 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Essential Oil Massage</h3>
+                                    <p class="mt-4 text-gray-600">A luxurious facial massage using La Mer's precious essential oils to nourish the skin, stimulate circulation, and release tension.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Step 7 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/00A79D/FFFFFF?text=La+Mer+Mask" alt="Signature Facial Mask" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 7 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Signature Facial Mask</h3>
+                                    <p class="mt-4 text-gray-600">A concentrated mask is applied to deeply infuse the skin with potent ingredients, targeting your specific concerns. <span class="text-xs font-bold block mt-2">*This step is exclusive to the 90-minute treatment.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 8 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/00A79D/FFFFFF?text=La+Mer+Cream" alt="Finishing Cream" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 8 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Finishing Cream</h3>
+                                    <p class="mt-4 text-gray-600">The iconic Crème de la Mer is applied to lock in moisture, soothe, and provide a final touch of healing hydration.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 9 -->
+                        <div class="carousel-slide hidden">
+                             <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/00A79D/FFFFFF?text=La+Mer+Sunscreen" alt="Sunscreen" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 9 of 9</p>
+                                    <h3 class="text-2xl font-serif mt-2">Sunscreen</h3>
+                                    <p class="mt-4 text-gray-600">To conclude, a broad-spectrum sunscreen is applied to protect your newly radiant skin from environmental aggressors.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel Buttons -->
+                    <button class="carousel-prev carousel-button left-0 md:-left-14">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button class="carousel-next carousel-button right-0 md:-right-14">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Clarins Treatment Journey Carousel -->
+            <section class="fade-in-section mb-24">
+                <h2 class="text-3xl md:text-4xl font-serif text-center mb-12">The Clarins Treatment Journey</h2>
+                <div id="clarins-carousel" class="relative w-full max-w-4xl mx-auto">
+                    <!-- Carousel Slides -->
+                    <div class="overflow-hidden">
+                        <!-- Step 1 -->
+                        <div class="carousel-slide">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/D92D2E/FFFFFF?text=Clarins+Remover" alt="Makeup Remover" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 1 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Makeup Removers</h3>
+                                    <p class="mt-4 text-gray-600">Your journey begins as we gently dissolve makeup, preparing your skin for the Clarins professional treatment.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Step 2 -->
+                        <div class="carousel-slide hidden">
+                           <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/D92D2E/FFFFFF?text=Clarins+Cleanser" alt="Cleanser" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 2 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Cleansers</h3>
+                                    <p class="mt-4 text-gray-600">A Clarins cleanser is selected for your skin type to purify and refresh, leaving a clean canvas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/D92D2E/FFFFFF?text=Clarins+Lotion" alt="Treatment Lotion" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 3 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Treatment Lotions</h3>
+                                    <p class="mt-4 text-gray-600">A specific Treatment Lotion is applied to tone and balance the skin's pH, enhancing its receptiveness to subsequent products.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/EAEAEA/333?text=Hand+Mask" alt="Hand Mask" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 4 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Hand Mask (Complimentary)</h3>
+                                    <p class="mt-4 text-gray-600">Enjoy a moment of relaxation with a complimentary hand mask to deeply moisturize and soften your hands.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 5 (Clarins Step 6) -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/D92D2E/FFFFFF?text=Clarins+Oil" alt="Essential Oil Massage" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 5 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Essential Oil Massage</h3>
+                                    <p class="mt-4 text-gray-600">Experience the Clarins Touch with a relaxing facial massage using their renowned plant-based essential oils to firm and revitalize.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Step 6 (Clarins Step 7) -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/D92D2E/FFFFFF?text=Clarins+Mask" alt="Signature Facial Mask" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 6 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Signature Facial Mask</h3>
+                                    <p class="mt-4 text-gray-600">A high-performance mask packed with plant extracts is applied to address your skin's needs, whether for firming, hydrating, or purifying.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 7 (Clarins Step 8) -->
+                        <div class="carousel-slide hidden">
+                            <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/D92D2E/FFFFFF?text=Clarins+Cream" alt="Finishing Cream" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 7 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Finishing Cream</h3>
+                                    <p class="mt-4 text-gray-600">A tailored finishing cream is massaged into the skin to seal in benefits and provide lasting comfort and protection.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 8 (Clarins Step 9) -->
+                        <div class="carousel-slide hidden">
+                             <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-lg">
+                                <img src="https://placehold.co/400x400/D92D2E/FFFFFF?text=Clarins+Sunscreen" alt="Sunscreen" class="rounded-lg shadow-md mx-auto">
+                                <div>
+                                    <p class="text-sm uppercase tracking-widest text-gray-500">Step 8 of 8</p>
+                                    <h3 class="text-2xl font-serif mt-2">Sunscreen</h3>
+                                    <p class="mt-4 text-gray-600">The final, essential step. A protective layer of Clarins sunscreen shields your skin from UV rays, preserving your treatment results.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel Buttons -->
+                    <button class="carousel-prev carousel-button left-0 md:-left-14">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button class="carousel-next carousel-button right-0 md:-right-14">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== FOOT MENU START ===== -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div>
+                     <h3 class="text-xl font-semibold tracking-widest uppercase mb-4">LOCATION</h3>
+                     <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+                <!-- Contact Info & Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">CONTACT</h3>
+                        <div class="text-sm leading-relaxed mt-4">
+                            <p>2nd Floor, The Crystal SB Ratchapruek</p>
+                            <p>Nonthaburi, Thailand</p>
+                            <p class="mt-4">Tel: 092-369-0456</p>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
+                        <div class="text-sm uppercase tracking-wider leading-loose mt-4">
+                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
+                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
+                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
+                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
+                        </div>
+                    </div>
+                     <div class="sm:col-span-2">
+                        <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
+                         <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
+                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2025 BANGKOK GENESIS CLINIC. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== FOOT MENU END ===== -->
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Language switcher
+            window.toggleLang = function() {
+                document.getElementById('lang-menu').classList.toggle('hidden');
+            }
+            document.addEventListener('click', function(e) {
+                const langSwitcher = document.getElementById('lang-switcher');
+                if (langSwitcher && !langSwitcher.contains(e.target)) {
+                    document.getElementById('lang-menu').classList.add('hidden');
+                }
+            });
+
+            // Mobile Menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMobileMenu = document.getElementById('close-mobile-menu');
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                });
+            }
+            if(closeMobileMenu) {
+                closeMobileMenu.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            }
+
+            // --- NEW Carousel Logic ---
+            function setupCarousel(carouselId) {
+                const carousel = document.getElementById(carouselId);
+                if (!carousel) return;
+
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const prevButton = carousel.querySelector('.carousel-prev');
+                const nextButton = carousel.querySelector('.carousel-next');
+                let currentIndex = 0;
+
+                function showSlide(index) {
+                    // Hide all slides first
+                    slides.forEach((slide, i) => {
+                        slide.classList.add('hidden');
+                    });
+                    
+                    // Show the correct slide
+                    slides[index].classList.remove('hidden');
+
+                    // Update button states
+                    prevButton.disabled = index === 0;
+                    nextButton.disabled = index === slides.length - 1;
+                }
+
+                prevButton.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        showSlide(currentIndex);
+                    }
+                });
+
+                nextButton.addEventListener('click', () => {
+                    if (currentIndex < slides.length - 1) {
+                        currentIndex++;
+                        showSlide(currentIndex);
+                    }
+                });
+                
+                // Initialize the carousel
+                showSlide(currentIndex);
+            }
+
+            // Initialize both carousels
+            setupCarousel('la-mer-carousel');
+            setupCarousel('clarins-carousel');
+            // --- END Carousel Logic ---
+
+            // Fade-in on scroll Logic
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const sectionsToFade = document.querySelectorAll('.fade-in-section');
+            sectionsToFade.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,243 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Bangkok Genesis Clinic</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
-        /* Ensure header text is always black on detail pages */
-        #header a, #header button, #header div > a, #header div > button { color: black; }
-        #header #lang-menu a { color: black !important; }
-        #services-dropdown-content * { color: black !important; }
-        .dropdown-item { @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200; }
-        .btn-primary { @apply mt-8 inline-block px-10 py-3 border border-black text-black font-semibold tracking-wider uppercase text-sm hover:bg-black hover:text-white transition-colors duration-300; }
-        .btn-submit { @apply w-full inline-block px-10 py-4 bg-black text-white font-semibold tracking-wider uppercase text-sm hover:bg-gray-800 transition-colors duration-300; }
-        .form-input { @apply w-full px-4 py-3 bg-gray-100 border border-transparent focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent transition-colors duration-200; }
+      body {
+        font-family: "Manrope", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+      /* Ensure header text is always black on detail pages */
+      #header a,
+      #header button,
+      #header div > a,
+      #header div > button {
+        color: black;
+      }
+      #header #lang-menu a {
+        color: black !important;
+      }
+      #services-dropdown-content * {
+        color: black !important;
+      }
+      .dropdown-item {
+        @apply block py-1 text-gray-600 hover:text-black transition-colors duration-200;
+      }
+      .btn-primary {
+        @apply mt-8 inline-block px-10 py-3 border border-black text-black font-semibold tracking-wider uppercase text-sm hover:bg-black hover:text-white transition-colors duration-300;
+      }
+      .btn-submit {
+        @apply w-full inline-block px-10 py-4 bg-black text-white font-semibold tracking-wider uppercase text-sm hover:bg-gray-800 transition-colors duration-300;
+      }
+      .form-input {
+        @apply w-full px-4 py-3 bg-gray-100 border border-transparent focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent transition-colors duration-200;
+      }
     </style>
-</head>
-<body class="bg-gray-50 text-gray-900">
-
+  </head>
+  <body class="bg-gray-50 text-gray-900">
     <!-- Header & Navigation -->
-    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
-        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
-             <!-- Desktop Menu (Left) -->
-            <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+    <header
+      class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md"
+      id="header"
+    >
+      <nav
+        class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center"
+      >
+        <!-- Desktop Menu (Left) -->
+        <div
+          class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest"
+        >
                 <div class="relative group py-5 -my-5">
-                    <!-- <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a> -->
-                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[800px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
-                        <div class="grid grid-cols-3 gap-x-8">
-                               <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="injectables.html" class="btn">Injectables</a></h3>
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
                                 <ul class="space-y-2 mt-4">
-                                    <li><a href="#" class="dropdown-item">Botox</a></li>
-                                    <li><a href="#" class="dropdown-item">Filler</a></li>
-                                    <li><a href="#" class="dropdown-item">Sculptra</a></li>
-                                    <li><a href="#" class="dropdown-item">Radiesse</a></li>
-                                    <li><a href="#" class="dropdown-item">Juvelook</a></li>
-                                    <li><a href="#" class="dropdown-item">Mesotherapy</a></li>
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
                                 </ul>
                             </div>
                             <!-- Column 2: Lasers and EBDs -->
                             <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Laser & EBDs</a></h3>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
                                 <ul class="space-y-2 mt-4">
-                                    <li><a href="#" class="dropdown-item">Ulthera SPT</a></li>
-                                    <li><a href="#" class="dropdown-item">Oligio</a></li>
-                                    <li><a href="#" class="dropdown-item">Potenza</a></li>
-                                    <li><a href="#" class="dropdown-item">Long pulse ND yag</a></li>
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
                                 </ul>
                             </div>
-                            <!-- Column 3: Regenerative Medicines -->
+                            <!-- Column 3: Regenerative Medicine -->
                             <div>
-                                 <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="#" class="btn">Regenerative Medicine</a></h3>
-                                 <ul class="space-y-2 mt-4">
-                                    <li><a href="#" class="dropdown-item">Viva la vida</a></li>
-                                    <li><a href="#" class="dropdown-item">Viva la bella</a></li>
-                                    <li><a href="#" class="dropdown-item">MSCs and Stem Cell</a></li>
-                                    <li><a href="#" class="dropdown-item">Penthin</a></li>
-                                    <li><a href="#" class="dropdown-item">Treatment Therapy</a></li>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
-            </div>
-            
-            <!-- Mobile Hamburger Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+          <a href="/aboutus.html" class="hover:opacity-70 transition-opacity"
+            >About Us</a
+          >
+        </div>
 
-            <!-- Logo Text Section -->
-            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
-                <a href="/index.html">BANGKOK GENESIS</a>
-            </div>
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
 
-            <!-- Desktop Menu (Right) -->
-            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
-                <a href="ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
-                <a href="contactus.html" class="hover:opacity-70 transition-opacity font-bold">Contact</a>
-                <!-- Language Switcher -->
-                <div class="relative" id="lang-switcher">
-                    <button onclick="toggleLang()" class="flex items-center space-x-1">
-                        <span>🇬🇧 EN</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
-                    </div>
-                </div>
+        <!-- Logo Text Section -->
+        <div
+          class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2"
+        >
+          <a href="/index.html">BANGKOK GENESIS</a>
+        </div>
+
+        <!-- Desktop Menu (Right) -->
+        <div
+          class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest"
+        >
+          <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity"
+            >Our Doctors</a
+          >
+          <a
+            href="/contactus.html"
+            class="hover:opacity-70 transition-opacity font-bold"
+            >Contact</a
+          >
+          <!-- Language Switcher -->
+          <div class="relative" id="lang-switcher">
+            <button onclick="toggleLang()" class="flex items-center space-x-1">
+              <span>🇬🇧 EN</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <div
+              id="lang-menu"
+              class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden"
+            >
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100"
+                >🇹🇭 ไทย</a
+              >
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
+      <!-- Hero Section -->
+      <section
+        class="relative h-[50vh] min-h-[300px] bg-cover bg-center"
+        style="background-image: url('src/contactus.png')"
+      >
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div
+          class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white"
+        >
+          <h1 class="text-5xl md:text-7xl font-serif">Connect With Us</h1>
+          <p class="mt-4 text-lg md:text-xl max-w-2xl font-light opacity-90">
+            Your journey to timeless beauty begins here. We look forward to
+            welcoming you.
+          </p>
+        </div>
+      </section>
 
-        <!-- Hero Section -->
-        <section class="relative h-[50vh] min-h-[300px] bg-cover bg-center" style="background-image: url('src/contactus.png');">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
-                <h1 class="text-5xl md:text-7xl font-serif">Connect With Us</h1>
-                <p class="mt-4 text-lg md:text-xl max-w-2xl font-light opacity-90">Your journey to timeless beauty begins here. We look forward to welcoming you.</p>
-            </div>
-        </section>
-
-        <!-- Contact Details & Map -->
-        <section class="py-20 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <!-- Contact Info -->
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-3xl font-serif mb-6">Visit Our Sanctuary</h3>
-                            <div class="flex items-start space-x-4">
-                                <svg class="w-6 h-6 text-gray-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="text-gray-600 font-light">
-                                    <p class="font-semibold text-black">Bangkok Genesis Clinic</p>
-                                    <p>2nd Floor, The Crystal SB Ratchapruek</p>
-                                    <p>Nonthaburi, Thailand</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                             <h4 class="font-serif text-xl mb-4">Contact Channels</h4>
-                             <div class="space-y-4">
-                                <div class="flex items-center space-x-4">
-                                    <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                    <p class="text-gray-600 font-light">092-369-0456</p>
-                                </div>
-                                <div class="flex items-center space-x-4">
-                                    <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <p class="text-gray-600 font-light">LINE: @bangkokgenesis</p>
-                                </div>
-                             </div>
-                        </div>
-
-                        <div>
-                            <h4 class="font-serif text-xl mb-4">Opening Hours</h4>
-                            <div class="flex items-start space-x-4 text-gray-600 font-light">
-                                <svg class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div>
-                                    <p>Daily: 11:00 AM - 8:00 PM</p>
-                                    <p class="text-sm italic mt-1">Booking in advance is highly recommended.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- Map -->
-                    <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-xl"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Message Form Section -->
-        <section class="bg-white py-20 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto">
-                    <h3 class="text-4xl font-serif">Send Us A Message</h3>
-                    <p class="mt-4 text-gray-600 font-light">
-                        Have a question or wish to book an appointment? Please fill out the form below, and our dedicated team will get back to you shortly.
+      <!-- Contact Details & Map -->
+      <section class="py-20 md:py-24">
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- Contact Info -->
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-3xl font-serif mb-6">Visit Our Sanctuary</h3>
+                <div class="flex items-start space-x-4">
+                  <svg
+                    class="w-6 h-6 text-gray-500 mt-1 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  <div class="text-gray-600 font-light">
+                    <p class="font-semibold text-black">
+                      Bangkok Genesis Clinic
                     </p>
+                    <p>2nd Floor, The Crystal SB Ratchapruek</p>
+                    <p>Nonthaburi, Thailand</p>
+                  </div>
                 </div>
-                <form class="mt-12 max-w-3xl mx-auto space-y-6">
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-semibold uppercase tracking-wider mb-2">Full Name</label>
-                            <input type="text" id="name" name="name" class="form-input">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-semibold uppercase tracking-wider mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-input">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-semibold uppercase tracking-wider mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-input">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-semibold uppercase tracking-wider mb-2">Your Message</label>
-                        <textarea id="message" name="message" rows="6" class="form-input"></textarea>
-                    </div>
-                    <div class="text-center pt-4">
-                        <button type="submit" class="btn-submit">Send Inquiry</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+              </div>
 
-        <!-- Preparing for your visit -->
-        <section class="py-20">
-            <div class="container mx-auto px-6 text-center">
-                 <h3 class="text-4xl font-serif">Preparing For Your Visit</h3>
-                 <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">To ensure your experience is seamless and relaxing from the moment you arrive.</p>
-                 <div class="mt-16 grid md:grid-cols-3 gap-12 max-w-5xl mx-auto text-left">
-                     <div class="flex items-start space-x-5">
-                         <div class="bg-black text-white p-3 rounded-full mt-1">
-                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m-6 10h6-6z"></path></svg>
-                         </div>
-                         <div>
-                             <h4 class="font-bold text-lg font-serif">Arrival Time</h4>
-                             <p class="mt-1 text-gray-600 font-light">We recommend arriving 10-15 minutes prior to your scheduled appointment to relax and complete any necessary paperwork.</p>
-                         </div>
-                     </div>
-                     <div class="flex items-start space-x-5">
-                         <div class="bg-black text-white p-3 rounded-full mt-1">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                         </div>
-                         <div>
-                             <h4 class="font-bold text-lg font-serif">Consultation</h4>
-                             <p class="mt-1 text-gray-600 font-light">Please feel free to prepare any questions or concerns you have. Our goal is to create a personalized treatment plan for you.</p>
-                         </div>
-                     </div>
-                      <div class="flex items-start space-x-5">
-                         <div class="bg-black text-white p-3 rounded-full mt-1">
-                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                         </div>
-                         <div>
-                             <h4 class="font-bold text-lg font-serif">Parking</h4>
-                             <p class="mt-1 text-gray-600 font-light">Ample parking is available at The Crystal SB Ratchapruek. Our clinic is conveniently located on the 2nd floor.</p>
-                         </div>
-                     </div>
-                 </div>
-            </div>
-        </section>
+              <div>
+                <h4 class="font-serif text-xl mb-4">Contact Channels</h4>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-4">
+                    <svg
+                      class="w-5 h-5 text-gray-500 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      ></path>
+                    </svg>
+                    <p class="text-gray-600 font-light">092-369-0456</p>
+                  </div>
+                  <div class="flex items-center space-x-4">
+                    <svg
+                      class="w-5 h-5 text-gray-500 flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <p class="text-gray-600 font-light">
+                      LINE: @bangkokgenesis
+                    </p>
+                  </div>
+                </div>
+              </div>
 
+              <div>
+                <h4 class="font-serif text-xl mb-4">Opening Hours</h4>
+                <div
+                  class="flex items-start space-x-4 text-gray-600 font-light"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-500 mt-1 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                  <div>
+                    <p>Daily: 11:00 AM - 8:00 PM</p>
+                    <p class="text-sm italic mt-1">
+                      Booking in advance is highly recommended.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Map -->
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg shadow-xl"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Message Form Section -->
+      <section class="bg-white py-20 md:py-24">
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-3xl mx-auto">
+            <h3 class="text-4xl font-serif">Send Us A Message</h3>
+            <p class="mt-4 text-gray-600 font-light">
+              Have a question or wish to book an appointment? Please fill out
+              the form below, and our dedicated team will get back to you
+              shortly.
+            </p>
+          </div>
+          <form class="mt-12 max-w-3xl mx-auto space-y-6">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-semibold uppercase tracking-wider mb-2"
+                  >Full Name</label
+                >
+                <input type="text" id="name" name="name" class="form-input" />
+              </div>
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-semibold uppercase tracking-wider mb-2"
+                  >Phone Number</label
+                >
+                <input type="tel" id="phone" name="phone" class="form-input" />
+              </div>
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-semibold uppercase tracking-wider mb-2"
+                >Email Address</label
+              >
+              <input type="email" id="email" name="email" class="form-input" />
+            </div>
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-semibold uppercase tracking-wider mb-2"
+                >Your Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                class="form-input"
+              ></textarea>
+            </div>
+            <div class="text-center pt-4">
+              <button type="submit" class="btn-submit">Send Inquiry</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Preparing for your visit -->
+      <section class="py-20">
+        <div class="container mx-auto px-6 text-center">
+          <h3 class="text-4xl font-serif">Preparing For Your Visit</h3>
+          <p class="mt-4 max-w-2xl mx-auto text-gray-600 font-light">
+            To ensure your experience is seamless and relaxing from the moment
+            you arrive.
+          </p>
+          <div
+            class="mt-16 grid md:grid-cols-3 gap-12 max-w-5xl mx-auto text-left"
+          >
+            <div class="flex items-start space-x-5">
+              <div class="bg-black text-white p-3 rounded-full mt-1">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m-6 10h6-6z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg font-serif">Arrival Time</h4>
+                <p class="mt-1 text-gray-600 font-light">
+                  We recommend arriving 10-15 minutes prior to your scheduled
+                  appointment to relax and complete any necessary paperwork.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-5">
+              <div class="bg-black text-white p-3 rounded-full mt-1">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg font-serif">Consultation</h4>
+                <p class="mt-1 text-gray-600 font-light">
+                  Please feel free to prepare any questions or concerns you
+                  have. Our goal is to create a personalized treatment plan for
+                  you.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-5">
+              <div class="bg-black text-white p-3 rounded-full mt-1">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg font-serif">Parking</h4>
+                <p class="mt-1 text-gray-600 font-light">
+                  Ample parking is available at The Crystal SB Ratchapruek. Our
+                  clinic is conveniently located on the 2nd floor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- ===== FOOT MENU START ===== -->
     <!-- Footer -->
     <footer class="bg-black text-white py-16">
         <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
@@ -262,17 +495,20 @@
                      <div>
                         <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
                         <div class="text-sm uppercase tracking-wider leading-loose mt-4">
-                            <a href="#" class="block hover:opacity-70">Services</a>
-                            <a href="aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
-                            <a href="our-doctor.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
+                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
+                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
+                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
+                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
+                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
                         </div>
                     </div>
                      <div class="sm:col-span-2">
                         <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
                          <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
-                            <a href="#" class="hover:opacity-100">FACEBOOK</a>
-                            <a href="#" class="hover:opacity-100">INSTAGRAM</a>
-                            <a href="#" class="hover:opacity-100">LINE</a>
+                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
                         </div>
                      </div>
                 </div>
@@ -282,28 +518,29 @@
             </div>
         </div>
     </footer>
+    <!-- ===== FOOT MENU END ===== -->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Language switcher
-            window.toggleLang = function() {
-                document.getElementById('lang-menu').classList.toggle('hidden');
-            }
-            
-            // Close language switcher if clicked outside
-            window.addEventListener('click', function(e) {
-                const langSwitcher = document.getElementById('lang-switcher');
-                if (langSwitcher && !langSwitcher.contains(e.target)) {
-                    document.getElementById('lang-menu').classList.add('hidden');
-                }
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Language switcher
+        window.toggleLang = function () {
+          document.getElementById("lang-menu").classList.toggle("hidden");
+        };
 
-            // Mobile Menu Logic (placeholder for potential mobile menu)
-            // const mobileMenuButton = document.getElementById('mobile-menu-button');
-            // if (mobileMenuButton) {
-            //     // Add mobile menu logic here if needed
-            // }
+        // Close language switcher if clicked outside
+        window.addEventListener("click", function (e) {
+          const langSwitcher = document.getElementById("lang-switcher");
+          if (langSwitcher && !langSwitcher.contains(e.target)) {
+            document.getElementById("lang-menu").classList.add("hidden");
+          }
         });
+
+        // Mobile Menu Logic (placeholder for potential mobile menu)
+        // const mobileMenuButton = document.getElementById('mobile-menu-button');
+        // if (mobileMenuButton) {
+        //     // Add mobile menu logic here if needed
+        // }
+      });
     </script>
-</body>
+  </body>
 </html>
