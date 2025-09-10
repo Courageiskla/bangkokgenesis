@@ -1,0 +1,81 @@
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-md">
+        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+             <!-- Desktop Menu (Left) -->
+            <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
+                <div class="relative group py-5 -my-5">
+                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
+                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
+                        <div class="grid grid-cols-3 gap-x-12">
+                            <!-- Column 1: Injectables -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
+                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
+                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
+                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
+                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
+                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 2: Lasers and EBDs -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
+                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
+                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
+                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
+                                </ul>
+                            </div>
+                            <!-- Column 3: Regenerative Medicine -->
+                            <div>
+                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
+                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
+                                </a></h3>
+                                <ul class="space-y-2 mt-4">
+                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
+                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
+                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
+                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
+            </div>
+            
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+
+            <!-- Logo Text Section -->
+            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
+                <a href="/index.html">BANGKOK GENESIS</a>
+            </div>
+
+            <!-- Desktop Menu (Right) -->
+            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
+                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
+                <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
+                <div class="relative" id="lang-switcher">
+                    <button onclick="toggleLang()" class="flex items-center space-x-1">
+                        <span>🇬🇧 EN</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>

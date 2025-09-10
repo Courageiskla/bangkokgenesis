@@ -38,90 +38,9 @@
 </head>
 <body class="bg-white text-gray-900">
 
-    <header class="sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-md" id="header">
-        <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
-             <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest">
-                <div class="relative group py-5 -my-5">
-                    <a href="#" class="inline-block hover:opacity-70 transition-opacity">Services</a>
-                    <div id="services-dropdown-content" class="absolute top-full left-0 w-[1100px] bg-white rounded-lg shadow-2xl p-8 hidden group-hover:block">
-                        <div class="grid grid-cols-3 gap-x-12">
-                            <!-- Column 1: Injectables -->
-                            <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/Injectables.html" class="btn">Injectables
-                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
-                                </a></h3>
-                                <ul class="space-y-2 mt-4">
-                                    <li><a href="/injectables/botox.html" class="dropdown-item">Botox</a></li>
-                                    <li><a href="/injectables/filler.html" class="dropdown-item">Filler</a></li>
-                                    <li><a href="/injectables/sculptra.html" class="dropdown-item">Sculptra</a></li>
-                                    <li><a href="/injectables/radiesse.html" class="dropdown-item">Radiesse</a></li>
-                                    <li><a href="/injectables/juvelook.html" class="dropdown-item">Juvelook</a></li>
-                                    <li><a href="/injectables/mesotherapy.html" class="dropdown-item">Mesotherapy</a></li>
-                                </ul>
-                            </div>
-                            <!-- Column 2: Lasers and EBDs -->
-                            <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/lasers.html" class="btn">Laser & EBDs
-                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
-                                </a></h3>
-                                <ul class="space-y-2 mt-4">
-                                    <li><a href="/lasers/ulthera.html" class="dropdown-item">Ulthera SPT</a></li>
-                                    <li><a href="/lasers/oligio.html" class="dropdown-item">Oligio</a></li>
-                                    <li><a href="/lasers/potenza.html" class="dropdown-item">Potenza</a></li>
-                                    <li><a href="/lasers/longpulsendyag.html" class="dropdown-item">Long pulse ND yag</a></li>
-                                </ul>
-                            </div>
-                            <!-- Column 3: Regenerative Medicine -->
-                            <div>
-                                <h3 class="font-bold mb-4 font-serif text-lg border-b pb-2"><a href="/regenmed.html" class="btn">Regenerative Medicine
-                                    <span class="block text-sm italic font-light text-gray-500 tracking-wider">Program</span>
-                                </a></h3>
-                                <ul class="space-y-2 mt-4">
-                                    <li><a href="/regenmed/vivalavida.html" class="dropdown-item">Viva la vida</a></li>
-                                    <li><a href="/regenmed/vivalabella.html" class="dropdown-item">Viva la bella</a></li>
-                                    <li><a href="/regenmed/penthin.html" class="dropdown-item">Penthin</a></li>
-                                    <li><a href="/regenmed/spaandtreatments.html" class="dropdown-item">Spa & treatments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="/aboutus.html" class="hover:opacity-70 transition-opacity">About Us</a>
-            </div>
-            
-            <div class="md:hidden">
-                <button id="mobile-menu-button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-
-            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
-                <a href="/index.html">BANGKOK GENESIS</a>
-            </div>
-
-            <div class="hidden md:flex items-center justify-end space-x-8 text-xs uppercase tracking-widest">
-                <a href="/ourdoctors.html" class="hover:opacity-70 transition-opacity">Our Doctors</a>
-                <a href="/contactus.html" class="hover:opacity-70 transition-opacity">Contact</a>
-                <div class="relative" id="lang-switcher">
-                    <button onclick="toggleLang()" class="flex items-center space-x-1">
-                        <span>🇬🇧 EN</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden">
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">🇹🇭 ไทย</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 z-40 flex-col items-center justify-center space-y-8 text-white text-xl uppercase tracking-widest hidden">
-        <button id="close-mobile-menu" class="absolute top-6 right-6 text-4xl">×</button>
-        <a href="#" class="mobile-link">Services</a>
-        <a href="#" class="mobile-link">About Us</a>
-        <a href="#" class="mobile-link">Reviews</a>
-        <a href="#" class="mobile-link">Contact</a>
-    </div>
+    <!-- Header & Navigation -->
+  <div id="header"></div>
+  <div id="mobile-menu-placeholder"></div>
 
     <main>
         <section class="relative bg-gray-100">
@@ -292,85 +211,13 @@
 
     <!-- ===== FOOT MENU START ===== -->
     <!-- Footer -->
-    <footer class="bg-black text-white py-16">
-        <div class="container mx-auto px-6 md:px-10 text-center md:text-left">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Map -->
-                <div>
-                     <h3 class="text-xl font-semibold tracking-widest uppercase mb-4">LOCATION</h3>
-                     <div class="aspect-w-16 aspect-h-9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.4928693577162!2d100.44588447694073!3d13.809416986588507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b6384cd734b%3A0xae1fec05f2efbcf5!2zQmFuZ2tvayBHZW5lc2lzIENsaW5pYyDguKrguLLguILguLLguYDguJTguK3guLDguITguKPguLTguKrguJXguLHguKUg4Lij4Liy4LiK4Lie4Lik4LiB4Lip4LmM!5e0!3m2!1sth!2sus!4v1750057863807!5m2!1sth!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                     </div>
-                </div>
-                <!-- Contact Info & Links -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-xl font-semibold tracking-widest uppercase">CONTACT</h3>
-                        <div class="text-sm leading-relaxed mt-4">
-                            <p>2nd Floor, The Crystal SB Ratchapruek</p>
-                            <p>Nonthaburi, Thailand</p>
-                            <p class="mt-4">Tel: 092-369-0456</p>
-                        </div>
-                    </div>
-                     <div>
-                        <h3 class="text-xl font-semibold tracking-widest uppercase">LINKS</h3>
-                        <div class="text-sm uppercase tracking-wider leading-loose mt-4">
-                            <a href="/injectables.html" class="block mt-2 hover:opacity-70">Injectables</a>
-                            <a href="/lasers.html" class="block mt-2 hover:opacity-70">Laser & EBDs</a>
-                            <a href="/regenmed.html" class="block mt-2 hover:opacity-70">Regenerative Medicine</a>
-                            <a href="/aboutus.html" class="block mt-2 hover:opacity-70">About Us</a>
-                            <a href="/ourdoctors.html" class="block mt-2 hover:opacity-70">Our Doctors</a>
-                            <a href="/contactus.html" class="block mt-2 hover:opacity-70">Contact</a>
-                        </div>
-                    </div>
-                     <div class="sm:col-span-2">
-                        <h3 class="text-xl font-semibold tracking-widest uppercase">FOLLOW US</h3>
-                         <div class="flex justify-center md:justify-start space-x-4 mt-4 opacity-70">
-                            <a href="https://www.facebook.com/bangkokgenesisclinic" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
-                            <a href="https://www.instagram.com/bangkokgenesis/" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-                            <a href="https://lin.ee/c0HXQdb" class="hover:opacity-100" target="_blank" rel="noopener noreferrer">LINE</a>
-                        </div>
-                     </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
-                <p>&copy; 2025 BANGKOK GENESIS CLINIC. ALL RIGHTS RESERVED.</p>
-            </div>
-        </div>
-    </footer>
+  <div id="footer"></div>
     <!-- ===== FOOT MENU END ===== -->
+
+    <script src="/script.js"></script>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Language switcher
-            window.toggleLang = function() {
-                document.getElementById('lang-menu').classList.toggle('hidden');
-            }
-            document.addEventListener('click', function(e) {
-                const langSwitcher = document.getElementById('lang-switcher');
-                if (langSwitcher && !langSwitcher.contains(e.target)) {
-                    document.getElementById('lang-menu').classList.add('hidden');
-                }
-            });
-
-            // Mobile Menu
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeMobileMenu = document.getElementById('close-mobile-menu');
-            
-            if(mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.remove('hidden');
-                    mobileMenu.classList.add('flex');
-                });
-            }
-            if(closeMobileMenu) {
-                closeMobileMenu.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                });
-            }
-
+        document.addEventListener('componentsLoaded', function () {
 
             // FAQ Accordion Logic
             const faqContainer = document.getElementById('faq-container');
