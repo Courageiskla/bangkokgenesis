@@ -1,4 +1,13 @@
-    <!-- Header & Navigation -->
+<style>
+  /* reserve space only on mobile so fixed header won't cover page content */
+  @media (max-width: 767px) {
+    :root { --site-header-h: 48px; } /* adjust if header height differs on mobile */
+    body { padding-top: var(--site-header-h); }
+  }
+  /* desktop keeps original layout (no extra top padding) */
+</style>
+
+<!-- Header & Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white shadow-md">
         <nav class="container mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
              <!-- Desktop Menu (Left) -->
@@ -59,7 +68,7 @@
             </div>
 
             <!-- Logo Text Section -->
-            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase absolute left-1/2 -translate-x-1/2">
+            <div class="text-lg md:text-2xl font-bold tracking-wide md:tracking-widest uppercase absolute left-1/2 -translate-x-1/2 whitespace-nowrap leading-none">
                 <a href="/index.html">BANGKOK GENESIS</a>
             </div>
 
