@@ -83,10 +83,177 @@
             </div>
         </section>
 
-        <!-- Services Grid Section -->
+ 
+        <!-- ====================================================== -->
+        <!-- ✨ NEW: Services Grid (Injectables) - 6 Items 3x2   -->
+        <!-- ====================================================== -->
         <section class="container mx-auto px-6 py-20">
+            <!-- ✨ FIX: เปลี่ยนเป็น lg:grid-cols-3 สำหรับ 3-columns -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Botox Card -->
+
+                <!-- 1. Botox Program Card -->
+                <!-- ✨ FIX: ปรับ h-64, text-4xl, -translate-y-16, translate-y-8 -->
+                <a href="injectables/botox.html"
+                    class="group relative block rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out h-64 bg-stone-100 hover:shadow-2xl hover:bg-stone-200">
+
+                    <!-- Title + Program (Moves up on hover) -->
+                    <div
+                        class="flex flex-col justify-center items-center text-center h-full p-8 transition-all duration-500 ease-in-out group-hover:-translate-y-16">
+                        <h3 class="text-4xl font-serif font-bold text-stone-900">
+                            Botox
+                        </h3>
+                        <p class="text-sm font-light text-stone-600 tracking-widest mt-2 uppercase">
+                            Program
+                        </p>
+                    </div>
+
+                    <!-- Description (Fades in from bottom on hover) -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 opacity-0 transform translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                        <p class="text-base font-light text-stone-800 text-center">
+                            Relax facial muscles to reduce wrinkles and fine lines for a
+                            smoother, youthful appearance.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 2. Filler Program Card -->
+                <!-- ✨ FIX: ปรับ h-64, text-4xl, -translate-y-16, translate-y-8 -->
+                <a href="injectables/filler.html"
+                    class="group relative block rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out h-64 bg-stone-100 hover:shadow-2xl hover:bg-stone-200">
+
+                    <!-- Title + Program (Moves up on hover) -->
+                    <div
+                        class="flex flex-col justify-center items-center text-center h-full p-8 transition-all duration-500 ease-in-out group-hover:-translate-y-16">
+                        <h3 class="text-4xl font-serif font-bold text-stone-900">
+                            Filler
+                        </h3>
+                        <p class="text-sm font-light text-stone-600 tracking-widest mt-2 uppercase">
+                            Program
+                        </p>
+                    </div>
+
+                    <!-- Description (Fades in from bottom on hover) -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 opacity-0 transform translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                        <p class="text-base font-light text-stone-800 text-center">
+                            Restore volume and contours, enhancing features and diminishing
+                            deep facial lines.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 3. Sculptra Program Card -->
+                <!-- ✨ FIX: ปรับ h-64, text-4xl, -translate-y-16, translate-y-8 -->
+                <a href="injectables/sculptra.html"
+                    class="group relative block rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out h-64 bg-stone-100 hover:shadow-2xl hover:bg-stone-200">
+
+                    <!-- Title + Program (Moves up on hover) -->
+                    <div
+                        class="flex flex-col justify-center items-center text-center h-full p-8 transition-all duration-500 ease-in-out group-hover:-translate-y-16">
+                        <h3 class="text-4xl font-serif font-bold text-stone-900">
+                            Sculptra
+                        </h3>
+                        <p class="text-sm font-light text-stone-600 tracking-widest mt-2 uppercase">
+                            Program
+                        </p>
+                    </div>
+
+                    <!-- Description (Fades in from bottom on hover) -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 opacity-0 transform translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                        <p class="text-base font-light text-stone-800 text-center">
+                            Stimulate your skin's natural collagen production for gradual,
+                            long-lasting facial rejuvenation.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 4. Radiesse Program Card -->
+                <!-- ✨ FIX: ปรับ h-64, text-4xl, -translate-y-16, translate-y-8 -->
+                <a href="injectables/radiesse.html"
+                    class="group relative block rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out h-64 bg-stone-100 hover:shadow-2xl hover:bg-stone-200">
+
+                    <!-- Title + Program (Moves up on hover) -->
+                    <div
+                        class="flex flex-col justify-center items-center text-center h-full p-8 transition-all duration-500 ease-in-out group-hover:-translate-y-16">
+                        <h3 class="text-4xl font-serif font-bold text-stone-900">
+                            Radiesse
+                        </h3>
+                        <p class="text-sm font-light text-stone-600 tracking-widest mt-2 uppercase">
+                            Program
+                        </p>
+                    </div>
+
+                    <!-- Description (Fades in from bottom on hover) -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 opacity-0 transform translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                        <p class="text-base font-light text-stone-800 text-center">
+                            Provide an immediate lift and stimulate collagen for improved
+                            skin structure and elasticity.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 5. Juvelook Program Card -->
+                <!-- ✨ FIX: ปรับ h-64, text-4xl, -translate-y-16, translate-y-8 -->
+                <a href="injectables/juvelook.html"
+                    class="group relative block rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out h-64 bg-stone-100 hover:shadow-2xl hover:bg-stone-200">
+
+                    <!-- Title + Program (Moves up on hover) -->
+                    <div
+                        class="flex flex-col justify-center items-center text-center h-full p-8 transition-all duration-500 ease-in-out group-hover:-translate-y-16">
+                        <h3 class="text-4xl font-serif font-bold text-stone-900">
+                            Juvelook
+                        </h3>
+                        <p class="text-sm font-light text-stone-600 tracking-widest mt-2 uppercase">
+                            Program
+                        </p>
+                    </div>
+
+                    <!-- Description (Fades in from bottom on hover) -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 opacity-0 transform translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                        <p class="text-base font-light text-stone-800 text-center">
+                            A hybrid filler that combines instant, natural volume with
+                            long-term collagen stimulation.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 6. Mesotherapy Program Card -->
+                <!-- ✨ FIX: ปรับ h-64, text-4xl, -translate-y-16, translate-y-8 -->
+                <a href="injectables/mesotherapy.html"
+                    class="group relative block rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out h-64 bg-stone-100 hover:shadow-2xl hover:bg-stone-200">
+
+                    <!-- Title + Program (Moves up on hover) -->
+                    <div
+                        class="flex flex-col justify-center items-center text-center h-full p-8 transition-all duration-500 ease-in-out group-hover:-translate-y-16">
+                        <h3 class="text-4xl font-serif font-bold text-stone-900">
+                            Mesotherapy
+                        </h3>
+                        <p class="text-sm font-light text-stone-600 tracking-widest mt-2 uppercase">
+                            Program
+                        </p>
+                    </div>
+
+                    <!-- Description (Fades in from bottom on hover) -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-8 opacity-0 transform translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+                        <p class="text-base font-light text-stone-800 text-center">
+                            Deliver a custom cocktail of vitamins and nutrients directly
+                            into the skin for targeted revitalization.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <!-- <section class="container mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <a href="injectables/botox.html" class="group relative block overflow-hidden rounded-lg shadow-lg">
                     <img src="https://placehold.co/600x700/D6E4FF/333?text=Botox"
                         class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -102,7 +269,7 @@
                     </div>
                 </a>
 
-                <!-- Filler Card -->
+                
                 <a href="injectables/filler.html" class="group relative block overflow-hidden rounded-lg shadow-lg">
                     <img src="https://placehold.co/600x700/FFE4D6/333?text=Filler"
                         class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -118,7 +285,7 @@
                     </div>
                 </a>
 
-                <!-- Sculptra Card -->
+                
                 <a href="injectables/sculptra.html" class="group relative block overflow-hidden rounded-lg shadow-lg">
                     <img src="https://placehold.co/600x700/D6FFD6/333?text=Sculptra"
                         class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -134,7 +301,7 @@
                     </div>
                 </a>
 
-                <!-- Radiesse Card -->
+                
                 <a href="injectables/radiesse.html" class="group relative block overflow-hidden rounded-lg shadow-lg">
                     <img src="https://placehold.co/600x700/FFF5D6/333?text=Radiesse"
                         class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -150,7 +317,7 @@
                     </div>
                 </a>
 
-                <!-- Juvelook Card -->
+                
                 <a href="injectables/juvelook.html" class="group relative block overflow-hidden rounded-lg shadow-lg">
                     <img src="https://placehold.co/600x700/FFD6F5/333?text=Juvelook"
                         class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -166,7 +333,7 @@
                     </div>
                 </a>
 
-                <!-- Mesotherapy Card -->
+                
                 <a href="injectables/mesotherapy.html" class="group relative block overflow-hidden rounded-lg shadow-lg">
                     <img src="https://placehold.co/600x700/D6FDFF/333?text=Mesotherapy"
                         class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -182,7 +349,7 @@
                     </div>
                 </a>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <!-- ===== FOOT MENU START ===== -->
